@@ -19,17 +19,17 @@ License: You must have a valid license purchased only from templatemonster to le
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 	<!-- vector map CSS -->
-    <link href="{{url("vendors/vectormap/jquery-jvectormap-2.0.3.css")}}vendors/vectormap/jquery-jvectormap-2.0.3.css" rel="stylesheet" type="text/css" />
+    <link href="{{url('public')}}/vendors/vectormap/jquery-jvectormap-2.0.3.css" rel="stylesheet" type="text/css" />
 
     <!-- Toggles CSS -->
-    <link href="{{url("vendors/jquery-toggles/css/toggles.css")}}" rel="stylesheet" type="text/css">
-    <link href="{{url("vendors/jquery-toggles/css/themes/toggles-light.css")}}" rel="stylesheet" type="text/css">
+    <link href="{{url('public')}}/vendors/jquery-toggles/css/toggles.css"  rel="stylesheet" type="text/css">
+    <link href="{{url('public')}}/vendors/jquery-toggles/css/themes/toggles-light.css"  rel="stylesheet" type="text/css">
 
 	<!-- Toastr CSS -->
-    <link href="{{url("vendors/jquery-toast-plugin/dist/jquery.toast.min.css")}}" rel="stylesheet" type="text/css">
+    <link href="{{url('public')}}/vendors/jquery-toast-plugin/dist/jquery.toast.min.css"  rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
-    <link href="{{url("dist/css/style.css")}}"rel="stylesheet" type="text/css">
+    <link href="{{url('public')}}/dist/css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -117,50 +117,50 @@ License: You must have a valid license purchased only from templatemonster to le
     <!-- /HK Wrapper -->
 
     <!-- jQuery -->
-    <script src="{{url("vendors/jquery/dist/jquery.min.js")}}"></script>
+    <script src="{{url('public')}}/vendors/jquery/dist/jquery.min.js" ></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="{{url("vendors/popper.js/dist/umd/popper.min.js")}}"></script>
-    <script src="{{url("vendors/bootstrap/dist/js/bootstrap.min.js")}}"></script>
+    <script src="{{url('public')}}/vendors/popper.js/dist/umd/popper.min.js" ></script>
+    <script src="{{url('public')}}/vendors/bootstrap/dist/js/bootstrap.min.js" ></script>
 
     <!-- Slimscroll JavaScript -->
-    <script src="{{url("dist/js/jquery.slimscroll.js")}}"></script>
+    <script src="{{url('public')}}/dist/js/jquery.slimscroll.js" ></script>
 
     <!-- Fancy Dropdown JS -->
-    <script src="{{url("dist/js/dropdown-bootstrap-extended.js")}}"></script>
+    <script src="{{url('public')}}/dist/js/dropdown-bootstrap-extended.js" ></script>
 
     <!-- FeatherIcons JavaScript -->
-    <script src="{{url("dist/js/feather.min.js")}}"></script>
+    <script src="{{url('public')}}/dist/js/feather.min.js" ></script>
 
     <!-- Toggles JavaScript -->
-    <script src="{{url("vendors/jquery-toggles/toggles.min.js")}}"></script>
-    <script src="{{url("dist/js/toggle-data.js")}}"></script>
+    <script src="{{url('public')}}/vendors/jquery-toggles/toggles.min.js" ></script>
+    <script src="{{url('public')}}/dist/js/toggle-data.js" ></script>
 
 	<!-- Counter Animation JavaScript -->
-	<script src="{{url("vendors/waypoints/lib/jquery.waypoints.min.js")}}"></script>
-	<script src="{{url("vendors/jquery.counterup/jquery.counterup.min.js")}}"></script>
+	<script src="{{url('public')}}/vendors/waypoints/lib/jquery.waypoints.min.js" ></script>
+	<script src="{{url('public')}}/vendors/jquery.counterup/jquery.counterup.min.js" ></script>
 
 	<!-- Sparkline JavaScript -->
-    <script src="{{url("vendors/jquery.sparkline/dist/jquery.sparkline.min.js")}}"></script>
+    <script src="{{url('public')}}/vendors/jquery.sparkline/dist/jquery.sparkline.min.js" ></script>
 
 	<!-- Vector Maps JavaScript -->
-    <script src="{{url("vendors/vectormap/jquery-jvectormap-2.0.3.min.js")}}"></script>
-    <script src="{{url("vendors/vectormap/jquery-jvectormap-world-mill-en.js")}}"></script>
-	<script src="{{url("dist/js/vectormap-data.js")}}"></script>
+    <script src="{{url('public')}}/vendors/vectormap/jquery-jvectormap-2.0.3.min.js" ></script>
+    <script src="{{url('public')}}/vendors/vectormap/jquery-jvectormap-world-mill-en.js" ></script>
+	<script src="{{url('public')}}/dist/js/vectormap-data.js" ></script>
 
 	<!-- Owl JavaScript -->
-    <script src="{{url("vendors/owl.carousel/dist/owl.carousel.min.js")}}"></script>
+    <script src="{{url('public')}}/vendors/owl.carousel/dist/owl.carousel.min.js" ></script>
 
 	<!-- Toastr JS -->
-    <script src="{{url("vendors/jquery-toast-plugin/dist/jquery.toast.min.js")}}"></script>
+    <script src="{{url('public')}}/vendors/jquery-toast-plugin/dist/jquery.toast.min.js" ></script>
 
 	<!-- Apex JavaScript -->
-    <script src="{{url("vendors/apexcharts/dist/apexcharts.min.js")}}"></script>
-	<script src="{{url("dist/js/irregular-data-series.js")}}"></script>
+    <script src="{{url('public')}}/vendors/apexcharts/dist/apexcharts.min.js" ></script>
+	<script src="{{url('public')}}/dist/js/irregular-data-series.js" ></script>
 
     <!-- Init JavaScript -->
-    <script src="{{url("dist/js/init.js")}}"></script>
-	<script src="{{url("dist/js/dashboard-data.js")}}"></script>
+    <script src="{{url('public')}}/dist/js/init.js" ></script>
+	<script src="{{url('public')}}/dist/js/dashboard-data.js" ></script>
 
 </body>
 

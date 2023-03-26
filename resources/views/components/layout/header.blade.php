@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-xl navbar-light fixed-top hk-navbar">
         <a id="navbar_toggle_btn" class="navbar-toggle-btn nav-link-hover" href="javascript:void(0);"><i class="ion ion-ios-menu"></i></a>
         <a class="navbar-brand" href="dashboard1.html">
-            <img class="brand-img d-inline-block mr-5" src="dist/img/logo.png" style="height: 20%; width: 10%;" alt="brand" />
+            <img class="brand-img d-inline-block mr-5" src="{{url('public')}}/dist/img/logo.png" style="height: 20%; width: 10%;" alt="brand" />
         </a>
         <ul class="navbar-nav hk-navbar-content">
             <li class="nav-item dropdown dropdown-authentication">
@@ -10,7 +10,7 @@
                     <div class="media">
                         <div class="media-img-wrap">
                             <div class="avatar">
-                                <img src="dist/img/avatar10.jpg" alt="user" class="avatar-img rounded-circle">
+                                <img src="{{url('public')}}/dist/img/avatar10.jpg" alt="user" class="avatar-img rounded-circle">
                             </div>
                             <span class="badge badge-success badge-indicator"></span>
                         </div>

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Admin\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +21,5 @@ Route::get('/', function () {
 Route::get('about', function () {
     return view('about');
 });
+
+Route::resource('admin', AdminController::class);

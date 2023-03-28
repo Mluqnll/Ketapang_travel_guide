@@ -1,169 +1,101 @@
-<div>
-    <!DOCTYPE html>
-<!--
-Template Name: Deepor - Responsive Bootstrap 4 Admin Dashboard Template
-Author: Hencework
 
-License: You must have a valid license purchased only from templatemonster to legally use the template for your project.
--->
+<!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Deepor I CRM Dashboard</title>
-    <meta name="description" content="A responsive bootstrap 4 admin dashboard template by hencework" />
+    <head>
+        <meta charset="utf-8" />
+        <title>E-KTG - Ketapang Travel Guide</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+        
+        <link rel="shortcut icon" href="{{ url('public/admin') }}/assets/images/user.png">
 
-	<!-- vector map CSS -->
-    <link href="{{url('public')}}/vendors/vectormap/jquery-jvectormap-2.0.3.css" rel="stylesheet" type="text/css" />
+        
+        <link href="{{ url('public/admin') }}/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet">
 
-    <!-- Toggles CSS -->
-    <link href="{{url('public')}}/vendors/jquery-toggles/css/toggles.css"  rel="stylesheet" type="text/css">
-    <link href="{{url('public')}}/vendors/jquery-toggles/css/themes/toggles-light.css"  rel="stylesheet" type="text/css">
+        
+        <link href="{{ url('public/admin') }}/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{ url('public/admin') }}/assets/css/jquery-ui.min.css" rel="stylesheet">
+        <link href="{{ url('public/admin') }}/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{ url('public/admin') }}/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{ url('public/admin') }}/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+        <link href="{{ url('public/admin') }}/assets/css/app.min.css" rel="stylesheet" type="text/css" />
 
-	<!-- Toastr CSS -->
-    <link href="{{url('public')}}/vendors/jquery-toast-plugin/dist/jquery.toast.min.css"  rel="stylesheet" type="text/css">
+        <link href="{{ url('public/admin') }}/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{ url('public/admin') }}/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{ url('public/admin') }}/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" /> 
 
-    <!-- Custom CSS -->
-    <link href="{{url('public')}}/dist/css/style.css" rel="stylesheet" type="text/css">
-</head>
+    </head>
 
-<body>
+    <body class="dark-sidenav">
+        
+       <x-layout.sidebar />
+        
+        
 
+        <div class="page-wrapper">
+            
+            <x-layout.header />
+            
 
-	<!-- HK Wrapper -->
-	<div class="hk-wrapper hk-vertical-nav">
-
-        <!-- Top Navbar -->
-        <x-layout.header/>
-
-        <!-- /Top Navbar -->
-
-        <!-- Vertical Nav -->
-        <x-layout.sidebar/>
-
-        <!-- /Vertical Nav -->
-
-        <!-- Setting Panel -->
-        <div class="hk-settings-panel">
-            <div class="nicescroll-bar position-relative">
-                <div class="settings-panel-wrap">
-                    <div class="settings-panel-head mb-15">
-                       <a href="javascript:void(0);" id="settings_panel_close" class="settings-panel-close"><span class="feather-icon"><i data-feather="x"></i></span></a>
-                    </div>
-
-                    <h6 class="mb-5">Layout</h6>
-                    <p class="font-14">Choose your preferred layout</p>
-                    <div class="layout-img-wrap">
-                        <div class="row">
-                            <a href="javascript:void(0);" class="col-6 mb-30 active">
-                                <img class="rounded opacity-70" src="dist/img/layout1.png" alt="layout">
-                                <i class="zmdi zmdi-check"></i>
-                            </a>
-                            <a href="dashboard2.html" class="col-6 mb-30">
-                                <img class="rounded opacity-70" src="dist/img/layout2.png" alt="layout">
-                                <i class="zmdi zmdi-check"></i>
-                            </a>
-                            <a href="dashboard3.html" class="col-6">
-                                <img class="rounded opacity-70" src="dist/img/layout3.png" alt="layout">
-                                <i class="zmdi zmdi-check"></i>
-                            </a>
+            
+            <div class="page-content">
+                <div class="container-fluid mb-10">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <x-utils.notif />
                         </div>
                     </div>
-                    <hr>
-                    <h6 class="mb-5">Navigation</h6>
-                    <p class="font-14">Menu comes in two modes: dark & light</p>
-                    <div class="button-list hk-nav-select mb-10">
-                        <button type="button" id="nav_light_select" class="btn btn-outline-primary btn-sm btn-wth-icon icon-wthot-bg"><span class="icon-label"><i class="fa fa-sun-o"></i> </span><span class="btn-text">Light Mode</span></button>
-                        <button type="button" id="nav_dark_select" class="btn btn-outline-light btn-sm btn-wth-icon icon-wthot-bg"><span class="icon-label"><i class="fa fa-moon-o"></i> </span><span class="btn-text">Dark Mode</span></button>
-                    </div>
-                    <hr>
-                    <h6 class="mb-5">Top Nav</h6>
-                    <p class="font-14">Choose your liked color mode</p>
-                    <div class="button-list hk-navbar-select mb-10">
-                        <button type="button" id="navtop_light_select" class="btn btn-outline-light btn-sm btn-wth-icon icon-wthot-bg"><span class="icon-label"><i class="fa fa-sun-o"></i> </span><span class="btn-text">Light Mode</span></button>
-                        <button type="button" id="navtop_dark_select" class="btn btn-outline-primary btn-sm btn-wth-icon icon-wthot-bg"><span class="icon-label"><i class="fa fa-moon-o"></i> </span><span class="btn-text">Dark Mode</span></button>
-                    </div>
-                    <hr>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h6>Scrollable Header</h6>
-                        <div class="toggle toggle-sm toggle-simple toggle-light toggle-bg-primary scroll-nav-switch"></div>
-                    </div>
-                    <button id="reset_settings" class="btn btn-primary btn-block btn-reset mt-30">Reset</button>
+                    <br>
+                    {{ $slot }}
                 </div>
+
+                <x-layout.footer />
+                
             </div>
-            <img class="d-none" src="dist/img/logo-light.png" alt="brand" />
-            <img class="d-none" src="dist/img/logo-dark.png" alt="brand" />
+            
         </div>
-        <!-- /Setting Panel -->
+        
 
-        <!-- Main Content -->
-        <div class="hk-pg-wrapper">
-			<!-- Container -->
-            {{$slot}}
-            <!-- /Container -->
+        
 
-            <!-- Footer -->
-            <x-layout.footer/>
-            <!-- /Footer -->
-        </div>
-        <!-- /Main Content -->
 
-    </div>
-    <!-- /HK Wrapper -->
+        
+        <script src="{{ url('public/admin') }}/assets/js/jquery.min.js"></script>
+        <script src="{{ url('public/admin') }}/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="{{ url('public/admin') }}/assets/js/metismenu.min.js"></script>
+        <script src="{{ url('public/admin') }}/assets/js/waves.js"></script>
+        <script src="{{ url('public/admin') }}/assets/js/feather.min.js"></script>
+        <script src="{{ url('public/admin') }}/assets/js/simplebar.min.js"></script>
+        <script src="{{ url('public/admin') }}/assets/js/jquery-ui.min.js"></script>
+        <script src="{{ url('public/admin') }}/assets/js/moment.js"></script>
+        <script src="{{ url('public/admin') }}/plugins/daterangepicker/daterangepicker.js"></script>
 
-    <!-- jQuery -->
-    <script src="{{url('public')}}/vendors/jquery/dist/jquery.min.js" ></script>
+        <script src="{{ url('public/admin') }}/plugins/apex-charts/apexcharts.min.js"></script>
+        <script src="{{ url('public/admin') }}/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+        <script src="{{ url('public/admin') }}/plugins/jvectormap/jquery-jvectormap-us-aea-en.js"></script>
+        <script src="{{ url('public/admin') }}/assets/pages/jquery.analytics_dashboard.init.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{{url('public')}}/vendors/popper.js/dist/umd/popper.min.js" ></script>
-    <script src="{{url('public')}}/vendors/bootstrap/dist/js/bootstrap.min.js" ></script>
+        
+        <script src="{{ url('public/admin') }}/assets/js/app.js"></script>
 
-    <!-- Slimscroll JavaScript -->
-    <script src="{{url('public')}}/dist/js/jquery.slimscroll.js" ></script>
-
-    <!-- Fancy Dropdown JS -->
-    <script src="{{url('public')}}/dist/js/dropdown-bootstrap-extended.js" ></script>
-
-    <!-- FeatherIcons JavaScript -->
-    <script src="{{url('public')}}/dist/js/feather.min.js" ></script>
-
-    <!-- Toggles JavaScript -->
-    <script src="{{url('public')}}/vendors/jquery-toggles/toggles.min.js" ></script>
-    <script src="{{url('public')}}/dist/js/toggle-data.js" ></script>
-
-	<!-- Counter Animation JavaScript -->
-	<script src="{{url('public')}}/vendors/waypoints/lib/jquery.waypoints.min.js" ></script>
-	<script src="{{url('public')}}/vendors/jquery.counterup/jquery.counterup.min.js" ></script>
-
-	<!-- Sparkline JavaScript -->
-    <script src="{{url('public')}}/vendors/jquery.sparkline/dist/jquery.sparkline.min.js" ></script>
-
-	<!-- Vector Maps JavaScript -->
-    <script src="{{url('public')}}/vendors/vectormap/jquery-jvectormap-2.0.3.min.js" ></script>
-    <script src="{{url('public')}}/vendors/vectormap/jquery-jvectormap-world-mill-en.js" ></script>
-	<script src="{{url('public')}}/dist/js/vectormap-data.js" ></script>
-
-	<!-- Owl JavaScript -->
-    <script src="{{url('public')}}/vendors/owl.carousel/dist/owl.carousel.min.js" ></script>
-
-	<!-- Toastr JS -->
-    <script src="{{url('public')}}/vendors/jquery-toast-plugin/dist/jquery.toast.min.js" ></script>
-
-	<!-- Apex JavaScript -->
-    <script src="{{url('public')}}/vendors/apexcharts/dist/apexcharts.min.js" ></script>
-	<script src="{{url('public')}}/dist/js/irregular-data-series.js" ></script>
-
-    <!-- Init JavaScript -->
-    <script src="{{url('public')}}/dist/js/init.js" ></script>
-	<script src="{{url('public')}}/dist/js/dashboard-data.js" ></script>
-
-</body>
+        <script src="{{ url('public/admin') }}/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="{{ url('public/admin') }}/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+        <script src="{{ url('public/admin') }}/plugins/datatables/dataTables.buttons.min.js"></script>
+        <script src="{{ url('public/admin') }}/plugins/datatables/buttons.bootstrap4.min.js"></script>
+        <script src="{{ url('public/admin') }}/plugins/datatables/jszip.min.js"></script>
+        <script src="{{ url('public/admin') }}/plugins/datatables/pdfmake.min.js"></script>
+        <script src="{{ url('public/admin') }}/plugins/datatables/vfs_fonts.js"></script>
+        <script src="{{ url('public/admin') }}/plugins/datatables/buttons.html5.min.js"></script>
+        <script src="{{ url('public/admin') }}/plugins/datatables/buttons.print.min.js"></script>
+        <script src="{{ url('public/admin') }}/plugins/datatables/buttons.colVis.min.js"></script>
+        <script src="{{ url('public/admin') }}/plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="{{ url('public/admin') }}/plugins/datatables/responsive.bootstrap4.min.js"></script>
+        <script src="{{ url('public/admin') }}/assets/pages/jquery.datatable.init.js"></script>
+        
+    </body>
 
 </html>
-
-</div>

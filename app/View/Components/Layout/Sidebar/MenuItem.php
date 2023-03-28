@@ -3,6 +3,7 @@
 namespace App\View\Components\Layout\Sidebar;
 
 use Closure;
+use Exception;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
@@ -16,9 +17,10 @@ class MenuItem extends Component
     public $url;
     public function __construct($label=null,$icon=null,$url=null)
     {
+        if (!$url) throw new Exception("Component Memerlukan Item Sidebar");
         $this->label = $label;
         $this->icon = $icon;
-        $this->url = $url;
+        $this->url = url($url);
     }
 
     /**

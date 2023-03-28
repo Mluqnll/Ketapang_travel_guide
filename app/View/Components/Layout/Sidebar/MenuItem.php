@@ -8,6 +8,7 @@ use Illuminate\View\Component;
 
 class MenuItem extends Component
 {
+    
     /**
      * Create a new component instance.
      */

@@ -33,13 +33,8 @@
                 <li><a class="page-scroll" href="desawisata">Desa Wisata</a></li>
                 <li class="dropdown"><a href="#home" class="dropdown-toggle page-scroll"
                         data-toggle="dropdown">Atraksi Wisata</a>
-                    <ul class="dropdown-menu">
-                        @foreach ($list_kategori as $kategori)
-                        <li>
-                            <a href="index.html">{{$kategori->nama}}</a>
-                        </li>
-                        @endforeach
-                    </ul>
+                        @yield('menu')
+                   
                 </li>
                 <li><a class="page-scroll" href="kalenderwisata">Kalender</a></li>
                 <li><a class="page-scroll" href="petawisata">Peta Wisata</a></li>

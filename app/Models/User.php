@@ -2,43 +2,42 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+use Illuminate\Support\Str;
+use App\Models\Model;
+use App\Models\ModelAuthenticate;
+
+class User extends ModelAuthenticate
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    protected $table = "user";
+    
+    public static function boot()
+    {
+        parent::boot();
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+        static::creating(function ($item) {
+            $item->id = (string) Str::orderedUuid();
+        });
+    }
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
+    }
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    function handleUploadPoto()
+    {
+        if (request()->hasFile('poto')) {
+            $poto = request()->file('poto');
+            $destination = "user";
+            $randomStr = Str::random(5);
+            $filename = time() . "-"  . $randomStr . "."  . $poto->extension();
+            $url = $poto->storeAs($destination, $filename);
+            $this->poto = "app/" . $url;
+            
+
+        }
+    }
+
+    
 }

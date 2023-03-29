@@ -4,6 +4,7 @@ use App\Http\Controllers\Web\WebDesaWisataController;
 use App\Http\Controllers\Web\WebKontakWisataController;
 use App\Http\Controllers\Web\WebKalenderWisataController;
 use App\Http\Controllers\Web\WebPetaWisataController;
+use App\Http\Controllers\Web\WebAtraksiWisataController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\PengelolaController;
@@ -25,10 +26,6 @@ use App\Http\Controllers\AuthController;
 */
 
 
-Route::get('index', function () {
-    return view('components/app');
-});
-
 Route::prefix('admin')->middleware('auth')->group(function(){
 
     Route::resource('/', AdminController::class);
@@ -48,16 +45,15 @@ Route::prefix('admin')->middleware('auth')->group(function(){
 });
 
 
+Route::get('login', [AuthController::class, 'login'])->name('login');
+Route::post('login', [AuthController::class, 'loginProcess']);
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::resource('/', WebDesaWisataController::class);
 Route::resource('desawisata', WebDesaWisataController::class);
 Route::resource('kontakwisata', WebKontakWisataController::class);
 Route::resource('kalenderwisata', WebKalenderWisataController::class);
 Route::resource('petawisata', WebPetaWisataController::class);
 
-
-Route::resource('admin', AdminController::class);
-
-
-Route::get('login', [AuthController::class, 'login'])->name('login');
-Route::post('login', [AuthController::class, 'loginProcess']);
-Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('atraksi-wisata/{kategori}',[WebAtraksiWisataController::class,'index']);
 

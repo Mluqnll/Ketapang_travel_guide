@@ -4,7 +4,7 @@
             <div class="row wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-md-8 centerize-col text-center">
                     <div class="footer-logo">
-                        <a href="index.html"><img src="{{url ('public')}}/assets/images/logo-corporate-white.png"
+                        <a href="#"><img src="{{url ('public')}}/assets/images/logo-putih.png"
                                 class="img-responsive centerize-col" alt="Footer Logo" /></a>
                     </div>
                     <div class="copy-right">© 2022 - {{date('Y')}} <span class="primary-color">KETAPANG TRAVEL GUIDE</span> by Teknologi Informasi</div>

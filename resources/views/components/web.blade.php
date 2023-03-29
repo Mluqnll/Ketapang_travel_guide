@@ -22,6 +22,36 @@
     <link rel="stylesheet" type="text/css" href="{{ url('public') }}/revolution/css/layers.css">
     <link rel="stylesheet" type="text/css" href="{{ url('public') }}/revolution/css/navigation.css">
 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+    {{-- search tool leaflet --}}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+    {{-- lokasi --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+
+    {{-- default extends leaflet --}}
+    <link rel="stylesheet" type="text/css" href="{{ url('public') }}/assets/css/leaflet.defaultextent.css">
+    <script src="{{ url('public') }}/assets/js/leaflet.defaultextent.js"></script>
+
+    {{-- search control --}}
+    {{-- <link rel="stylesheet" type="text/css"
+        href="{{ url('public') }}/assets/js/leaflet-search/dist/leaflet-search.min.css">
+    <script src="{{ url('public') }}/assets/js/leaflet-search/dist/leaflet-search.src.js"></script> --}}
+
+    <link rel="stylesheet"
+        href="{{ url('public') }}/assets/js/leaflet-panel-layers/dist/leaflet-panel-layers.min.css" />
+    <script src="{{ url('public') }}/assets/js/leaflet-panel-layers/dist/leaflet-panel-layers.src.js"></script>
+
 </head>
 
 <body>
@@ -73,6 +103,7 @@
     <script src="{{ url('public') }}/revolution/js/revolution.extension.video.min.js"></script>
     <!--== Javascript Plugins End ==-->
 
+    @stack('script')
 </body>
 
 </html>

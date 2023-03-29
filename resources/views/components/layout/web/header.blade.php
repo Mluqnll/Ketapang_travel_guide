@@ -30,15 +30,15 @@
 
         <div class="collapse navbar-collapse" id="navbar-menu">
             <ul class="nav navbar-nav" data-in="fadeIn" data-out="fadeOut">
-                <li><a class="page-scroll" href="desawisata">Desa Wisata</a></li>
-                <li class="dropdown"><a href="#home" class="dropdown-toggle page-scroll"
+                <li><a class="page-scroll" href="{{url('desawisata')}}">Desa Wisata</a></li>
+                <li class="dropdown"><a class="dropdown-toggle page-scroll"
                         data-toggle="dropdown">Atraksi Wisata</a>
                         @yield('menu')
-                   
+
                 </li>
-                <li><a class="page-scroll" href="kalenderwisata">Kalender</a></li>
-                <li><a class="page-scroll" href="petawisata">Peta Wisata</a></li>
-                <li><a class="page-scroll" href="kontakwisata">Info & Kontak</a></li>
+                <li><a class="page-scroll" href="{{url('kalenderwisata')}}">Kalender</a></li>
+                <li><a class="page-scroll" href="{{url('petawisata')}}">Peta Wisata</a></li>
+                <li><a class="page-scroll" href="{{url('kontakwisata')}}">Info & Kontak</a></li>
             </ul>
         </div>
 

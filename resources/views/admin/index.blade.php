@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<h1>Halaman Admin</h1>
-=======
 <x-app>
     <div class="row">
         <div class="col-sm-12">
@@ -107,4 +104,3 @@
         </div>
     </div>
 </x-app>
->>>>>>> 211db0151af6894aa1f7b382c9e5aa2b00cca482

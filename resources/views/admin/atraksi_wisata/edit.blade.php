@@ -56,11 +56,11 @@
                             
                             <label class="col-sm-2 col-form-label text-left"> Jam Buka</label>
                             <div class="col-sm-4">
-                                <input type="time" class="form-control" name="jam_buka"placeholder="Jam Buka">
+                                <input type="time" class="form-control" name="jam_buka" value="{{ $atraksi_wisata->jam_buka}}">
                             </div>
                             <label class="col-sm-2 col-form-label text-left"> Jam Tutup</label>
                             <div class="col-sm-4">
-                                <input type="time" class="form-control" name="jam_tutup" placeholder="Jam Tutup">
+                                <input type="time" class="form-control" name="jam_tutup" value="{{ $atraksi_wisata->jam_tutup}}">
                             </div>
                         </div>
 
@@ -77,7 +77,7 @@
 
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left"> Foto</label>
-                            <div class="col-sm-4">
+                            <div class="col-sm-6">
                                 <img src="{{ url("public/$atraksi_wisata->foto") }}" alt="" height="310"
                                             class="rounded">
                             </div>

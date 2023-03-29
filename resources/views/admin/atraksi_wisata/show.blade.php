@@ -31,8 +31,7 @@
                                     <td class="text-center">{{ $loop->iteration }}</td>
                                     <td class="text-center">
                                         <div class="btn-group">
-                                            <x-layout.button.info-button url="admin/atraksi-wisata"
-                                                id="{{ $atraksi_wisata->id }}" />
+                                            <a href="{{ url("admin/atraksi-wisata/show-atraksi-wisata/$atraksi_wisata->id") }}" class="btn btn-info"><span class="fa fa-info"></span> Lihat</a>
                                             <x-layout.button.edit-button url="admin/atraksi-wisata"
                                                 id="{{ $atraksi_wisata->id }}" />
                                             <x-layout.button.delete-button url="admin/atraksi-wisata"

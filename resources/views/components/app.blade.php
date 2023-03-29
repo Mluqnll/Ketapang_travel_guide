@@ -95,6 +95,11 @@
         <script src="{{ url('public/admin') }}/plugins/datatables/dataTables.responsive.min.js"></script>
         <script src="{{ url('public/admin') }}/plugins/datatables/responsive.bootstrap4.min.js"></script>
         <script src="{{ url('public/admin') }}/assets/pages/jquery.datatable.init.js"></script>
+
+        <script src="{{ url('public/admin') }}/plugins/leaflet/leaflet.js"></script> 
+        <script src="{{ url('public/admin') }}/plugins/lightpick/lightpick.js"></script>
+        <script src="{{ url('public/admin') }}/assets/pages/jquery.profile.init.js"></script> 
+
         
     </body>
 

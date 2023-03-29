@@ -60,8 +60,9 @@ class AtraksiWisataController extends Controller
         return view('admin.atraksi_wisata.edit', $data);
     }
 
-    public function update(Request $request, string $id)
+    public function update($atraksi_wisata)
     {
+        $atraksi_wisata = AtraksiWisata::find($atraksi_wisata);
         $atraksi_wisata->id_kategori = request('id_kategori');
         $atraksi_wisata->nama = request('nama');
         $atraksi_wisata->alamat = request('alamat');
@@ -78,7 +79,15 @@ class AtraksiWisataController extends Controller
         $atraksi_wisata->handleUploadPoto();
         $atraksi_wisata->save();
 
-        return redirect('admin/atraksi-wisata')->with('success', 'Data Berhasil Disimpan');
+        $id_kategori = request('id_kategori');
+        return redirect('admin/atraksi-wisata/'.$id_kategori)->with('success', 'Data Berhasil Disimpan');
+    }
+
+    public function detail($atraksi_wisata)
+    {
+        $data['atraksi_wisata'] = AtraksiWisata::find($atraksi_wisata);
+
+        return view('admin.atraksi_wisata.detail', $data);
     }
 
    

@@ -23,8 +23,8 @@
                         <tbody>
                             @foreach ($list_kategori as $kategori)
                                 <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>
+                                    <td class="text-center">{{ $loop->iteration }}</td>
+                                    <td class="text-center">
                                         <div class="btn-group">
                                             <x-layout.button.info-button url="admin/atraksi-wisata"
                                                 id="{{ $kategori->id }}" />
@@ -34,7 +34,7 @@
                                                 id="{{ $kategori->id }}" /> --}}
                                         </div>
                                     </td>
-                                    <td>{{ $kategori->nama }}</td>
+                                    <td class="text-center">{{ $kategori->nama }}</td>
                                 </tr>
                             @endforeach
                         </tbody>

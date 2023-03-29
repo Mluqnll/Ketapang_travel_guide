@@ -10,6 +10,10 @@ class KalenderWisata extends Model
 {
     protected $table="kalender_wisata";
 
+    public function Bulan()
+    {
+        return $this->belongsTo(Bulan::class, 'id_bulan');
+    }
 
     function handleUploadFoto()
     {

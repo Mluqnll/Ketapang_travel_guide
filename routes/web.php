@@ -8,8 +8,17 @@ use App\Http\Controllers\Admin\AtraksiWisataController;
 use App\Http\Controllers\Admin\KalenderWisataController;
 use App\Http\Controllers\Admin\KontakController;
 use App\Http\Controllers\Admin\KategoriController;
+
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Web\WebDesaWisataController;
+use App\Http\Controllers\Web\WebKontakWisataController;
+use App\Http\Controllers\Web\WebKalenderWisataController;
+use App\Http\Controllers\Web\WebPetaWisataController;
+use App\Http\Controllers\Web\WebAtraksiWisataController;
+
 use App\Http\Controllers\Admin\GaleriController;
 use App\Http\Controllers\AuthController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,7 +42,7 @@ Route::prefix('admin')->middleware('auth')->group(function(){
 
     Route::resource('desa-wisata', DesaWisataController::class);
     
-    
+  
 
     Route::resource('atraksi-wisata', AtraksiWisataController::class);
     Route::get('atraksi-wisata/show-atraksi-wisata/{atraksi_wisata}', [AtraksiWisataController::class, 'detail']);
@@ -49,6 +58,23 @@ Route::get('delete-galeri/{galeri}', [DesaWisataController::class, 'deleteGaleri
 
 Route::post('store-bulan', [KalenderWisataController::class, 'storeBulan']);
 
+
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'loginProcess']);
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+
+
+Route::resource('/', WebDesaWisataController::class);
+Route::resource('desawisata', WebDesaWisataController::class);
+Route::resource('kontakwisata', WebKontakWisataController::class);
+Route::resource('kalenderwisata', WebKalenderWisataController::class);
+Route::resource('petawisata', WebPetaWisataController::class);
+
+Route::get('atraksi-wisata/{kategori}',[WebAtraksiWisataController::class,'index']);
+
+
+Route::get('login', [AuthController::class, 'login'])->name('login');
+Route::post('login', [AuthController::class, 'loginProcess']);
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+

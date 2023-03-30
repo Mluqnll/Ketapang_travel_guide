@@ -54,6 +54,27 @@
         </div>
 
     </div>
+
+
+    <div class="row justify-content">
+        @foreach ($list_galeri as $galeri)
+            @if ($galeri->id_desa_wisata == $desa_wisata->id)
+                <div class="col-md-6 col-lg-2">
+                    <a href="{{ url("delete-galeri/$galeri->id") }}"
+                        onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"
+                        class="btn btn-danger"><span class="fa fa-times"></span> Hapus Galeri</a>
+                    <div class="card report-card">
+                        <div class="card-body">
+                            <div class="row d-flex justify-content-center">
+                                <img src="{{ url("public/$galeri->foto") }}" class="rounded"
+                                    style="object-fit: cover; position: static; width: 100%; height: 200px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endif
+        @endforeach
+
     
     <div class="row justify-content">
         @foreach ($list_galeri as $galeri)
@@ -68,6 +89,7 @@
             </div>
         </div> 
                 @endforeach                   
+
     </div>
     <div class="modal fade" id="modaltambah" tabindex="-1" role="dialog" aria-labelledby="modaltambah"
         aria-hidden="true">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\DesaWisata;
+use App\Models\Galeri;
 
 class DesaWisataController extends Controller
 {
@@ -37,7 +38,7 @@ class DesaWisataController extends Controller
     public function show($desa_wisata)
     {
         $data['desa_wisata'] = DesaWisata::find($desa_wisata);
-
+        $data['list_galeri'] = Galeri::all();
         return view('admin.desa_wisata.show', $data);
     }
 
@@ -70,5 +71,22 @@ class DesaWisataController extends Controller
         DesaWisata::destroy($desa_wisata);
 
         return back()->with('danger', 'Data Berhasil Dihapus');
+    }
+
+    public function storeGaleri(Request $request)
+    {
+        $galeri = New Galeri;
+        $galeri->id_desa_wisata = request('id_desa_wisata');
+        $galeri->handleUploadFoto();
+        $galeri->save();
+
+        return back();
+    }
+
+    public function deleteGaleri($galeri)
+    {
+        Galeri::destroy($galeri);
+
+        return back()->with('danger', 'Data Galeri Berhasil Dihapus');
     }
 }

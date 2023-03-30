@@ -2,22 +2,23 @@
 
     @include('menu.menu')
     <!--== Hero Slider Start ==-->
-    <section class="xxl-screen pt-0 pb-0 bg-flex-cover" id="home" style="background-image: url(public/assets/images/1.jpg);">
+    <section class="xxl-screen pt-0 pb-0 bg-flex-cover" id="home"
+        style="background-image: url(public/assets/images/1.jpg);">
         <div class="hero-text-wrap xxl-screen">
-          <div class="hero-text">
-            <div class="text-content-slider slick">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-8 centerize-col">
-                    <div class="all-padding-50 text-center">
-                        <img src="{{ url('public') }}/assets/images/logo-putih.png"
-                        alt="" style="width:100%; height:auto; object-fit: cover; ">
+            <div class="hero-text">
+                <div class="text-content-slider slick">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 centerize-col">
+                                <div class="all-padding-50 text-center">
+                                    <img src="{{ url('public') }}/assets/images/logo-putih.png" alt=""
+                                        style="width:100%; height:auto; object-fit: cover; ">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
     </section>
     <!--== Hero Slider End ==-->
@@ -60,17 +61,32 @@
                         <div class="col-md-4 blog-list wow fadeInLeft" data-wow-delay="0.1s">
                             <div class="post-wrap">
                                 <div class="post-img">
-                                    <div class="item"><img class="img-responsive"
-                                            src="{{ url("public/$desa_wisata->foto") }}" alt="" /></div>
-                                </div>
 
-                                <div class="post-text">
-                                    <h3><a
-                                            href="{{ url("$desa_wisata->link_jadesta") }}">{{ $desa_wisata->nama_desa_wisata }}</a>
-                                    </h3>
-                                    <p>
-                                        {{ url("$desa_wisata->deskripsi") }}
-                                    </p>
+                                    <div class="blog-grid-slider slick">
+                                        @foreach ($list_galeri as $galeri)
+                                            @if ($galeri->id_desa_wisata == $desa_wisata->id)
+                                                <div class="item">
+
+                                                    <a class="image-popup-no-margins"
+                                                        href="{{ url("public/$desa_wisata->foto") }}">
+                                                        <img class="img-responsive"
+                                                            style="width:100% ; height:300px; object-fit: cover"
+                                                            src="{{ url("public/$galeri->foto") }}"
+                                                            alt="Tidak Dapat Memuat Gambar" />
+                                                    </a>
+                                                </div>
+                                            @endif
+                                        @endforeach
+                                    </div>
+
+                                    <div class="post-text">
+                                        <h3><a
+                                                href="{{ url("$desa_wisata->link_jadesta") }}">{{ $desa_wisata->nama_desa_wisata }}</a>
+                                        </h3>
+                                        <p>
+                                            {{ url("$desa_wisata->deskripsi") }}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

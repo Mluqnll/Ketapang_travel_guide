@@ -57,7 +57,7 @@
                     <div class="team-member" >
                         <div class="team-thumb">
                             <div class="thumb-overlay"></div>
-                            <img src="{{ url('public') }}/assets-web/Kontak/P.jpg" alt="">
+                            <img src="{{ url('public') }}/assets/images/P.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                     <div class="team-member" >
                         <div class="team-thumb">
                             <div class="thumb-overlay"></div>
-                            <img src="{{ url('public') }}/assets-web/Kontak/Q.png" alt="">
+                            <img src="{{ url('public') }}/assets/images/Q.png" alt="">
                         </div>
                     </div>
                 </div>

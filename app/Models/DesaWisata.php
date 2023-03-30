@@ -10,6 +10,11 @@ class DesaWisata extends Model
 {
     protected $table="desa_wisata";
 
+    public function Galeri()
+    {
+        return $this->belongsTo(Galeri::class, 'id');
+    }
+
     function handleUploadFoto()
     {
         if (request()->hasFile('foto')) {

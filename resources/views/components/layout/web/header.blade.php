@@ -14,7 +14,6 @@
     </div>
 
     <div class="container">
-
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i
                     class="tr-icon ion-android-menu"></i> </button>
@@ -30,18 +29,18 @@
 
         <div class="collapse navbar-collapse" id="navbar-menu">
             <ul class="nav navbar-nav" data-in="fadeIn" data-out="fadeOut">
-                <li><a class="page-scroll" href="{{url('desawisata')}}">Desa Wisata</a></li>
-                <li class="dropdown"><a class="dropdown-toggle page-scroll"
-                        data-toggle="dropdown">Atraksi Wisata</a>
-                        @yield('menu')
-
+                <li><a class="page-scroll" href="{{ url('desawisata') }}">Desa Wisata</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle page-scroll" data-toggle="dropdown">
+                        Atraksi Wisata
+                    </a>
+                    @yield('menu')
                 </li>
-                <li><a class="page-scroll" href="{{url('kalenderwisata')}}">Kalender</a></li>
-                <li><a class="page-scroll" href="{{url('petawisata')}}">Peta Wisata</a></li>
-                <li><a class="page-scroll" href="{{url('kontakwisata')}}">Info & Kontak</a></li>
+                <li><a class="page-scroll" href="{{ url('kalenderwisata') }}">Kalender</a></li>
+                <li><a class="page-scroll" href="{{ url('petawisata') }}">Peta Wisata</a></li>
+                <li><a class="page-scroll" href="{{ url('kontakwisata') }}">Info & Kontak</a></li>
             </ul>
         </div>
-
     </div>
 
 </nav>

@@ -64,5 +64,6 @@ Route::resource('desawisata', WebDesaWisataController::class);
 Route::resource('kontakwisata', WebKontakWisataController::class);
 Route::resource('kalenderwisata', WebKalenderWisataController::class);
 Route::resource('petawisata', WebPetaWisataController::class);
+Route::resource('atraksiwisata',WebAtraksiWisataController::class);
 
 Route::get('atraksi-wisata/{kategori}',[WebAtraksiWisataController::class,'index']);

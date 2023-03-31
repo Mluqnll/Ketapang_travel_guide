@@ -13,7 +13,7 @@ class WebPetaWisataController extends Controller
     public function index()
     {
         $data['list_kategori'] = Kategori::all();
-        $data['list_desa_wisata'] = DesaWisata::all();
+        $data['list_desa_wisata'] =DesaWisata::all();
         $data['list_atraksi_wisata']=AtraksiWisata::all();
         return view('web.peta_wisata', $data);
     }

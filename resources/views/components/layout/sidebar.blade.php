@@ -22,7 +22,7 @@
                 icon="fa fa-calendar" />
             <x-layout.sidebar.menu-item url="admin/kategori" label="Kategori" icon="fa fa-list" />
             <x-layout.sidebar.menu-item url="admin/kontak" label="Kontak" icon="fa fa-phone" />
-
+            <x-layout.sidebar.menu-item url="admin/detail-web" label="Detail" icon="fa fa-info" />
 
         </ul>
 

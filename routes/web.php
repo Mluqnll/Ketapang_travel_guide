@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\AtraksiWisataController;
 use App\Http\Controllers\Admin\KalenderWisataController;
 use App\Http\Controllers\Admin\KontakController;
 use App\Http\Controllers\Admin\KategoriController;
+use App\Http\Controllers\Admin\DetailController;
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Web\WebDesaWisataController;
@@ -17,7 +18,7 @@ use App\Http\Controllers\Web\WebPetaWisataController;
 use App\Http\Controllers\Web\WebAtraksiWisataController;
 
 use App\Http\Controllers\Admin\GaleriController;
-use App\Http\Controllers\AuthController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +53,9 @@ Route::prefix('admin')->middleware('auth')->group(function(){
     Route::resource('kontak', KontakController::class);
 
     Route::resource('kategori', KategoriController::class);
+
+    Route::resource('detail-web', DetailController::class);
+
 });
 Route::post('store-galeri', [DesaWisataController::class, 'storeGaleri']);
 Route::get('delete-galeri/{galeri}', [DesaWisataController::class, 'deleteGaleri']);

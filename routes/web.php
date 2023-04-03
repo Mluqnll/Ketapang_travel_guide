@@ -16,6 +16,7 @@ use App\Http\Controllers\Web\WebKontakWisataController;
 use App\Http\Controllers\Web\WebKalenderWisataController;
 use App\Http\Controllers\Web\WebPetaWisataController;
 use App\Http\Controllers\Web\WebAtraksiWisataController;
+use App\Http\Controllers\Admin\GaleriController;
 
 /*
 |--------------------------------------------------------------------------

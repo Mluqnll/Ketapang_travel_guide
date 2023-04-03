@@ -18,7 +18,6 @@
                                 <input type="text" class="form-control" name="nama" value="{{ $kontak_wisata->nama }}">
                             </div>
 
-
                         </div>
 
                         <div class="form-group row">
@@ -26,7 +25,6 @@
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" name="jabatan" value="{{ $kontak_wisata->jabatan }}">
                             </div>
-
 
                         </div>
 
@@ -36,6 +34,7 @@
                                 <input type="text" class="form-control" name="link_wa" value="{{ $kontak_wisata->link_wa }}">
                             </div>
 
+             
 
                         </div>
 
@@ -44,7 +43,6 @@
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" name="link_fb" value="{{ $kontak_wisata->link_fb }}">
                             </div>
-
 
                         </div>
 
@@ -58,10 +56,18 @@
                         </div>
 
 
+                           
+                        </div>
+
+
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left">Foto</label>
                             <div class="col-md-6">
+
                                 <img src="{{ url("public/$kontak_wisata->foto") }}" class="rounded" style="object-fit: cover; position: static; width: 100%; height: 200px;">
+
+                                <img src="{{ url("public/$kontak_wisata->foto") }}" class="rounded" style="object-fit: cover; position: static; width: 100%; height: 200px;">    
+
                             </div>
                             <div class="col-sm-4">
                                 <input type="file" class="form-control" name="foto" accept=".jpg, .png, .jpeg" value="{{ $kontak_wisata->foto }}">
@@ -70,6 +76,12 @@
 
                         </div>
 
+
+
+                            
+                        </div>
+
+                       
 
 
                         <div class="form-group row mb-0">

@@ -36,14 +36,12 @@ class KontakController extends Controller
         return redirect('admin/kontak')->with('primary', 'Data Berhasil Disimpan');
     }
 
-
     public function show($kontak_wisata)
     {
         $data['kontak_wisata'] = KontakWisata::find($kontak_wisata);
 
         return view('admin.kontak.show', $data);
     }
-
 
     public function edit($kontak_wisata)
     {
@@ -66,7 +64,6 @@ class KontakController extends Controller
 
         return redirect('admin/kontak')->with('primary', 'Data Berhasil Disimpan');
     }
-
 
     public function destroy($kontak_wisata)
     {

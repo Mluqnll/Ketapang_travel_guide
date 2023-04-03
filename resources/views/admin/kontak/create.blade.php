@@ -26,7 +26,6 @@
                                 <input type="text" class="form-control" name="jabatan" placeholder="Jabatan Penanggung Jawab">
                             </div>
 
-
                         </div>
 
                         <div class="form-group row">
@@ -44,7 +43,6 @@
                                 <input type="text" class="form-control" name="link_fb" placeholder="Nama Akun/Link Akun Sosmed Facebook">
                             </div>
 
-
                         </div>
 
                         <div class="form-group row">
@@ -57,6 +55,11 @@
                         </div>
 
 
+                           
+                        </div>
+                        
+
+
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left">Foto</label>
                             <div class="col-sm-10">
@@ -64,6 +67,12 @@
                             </div>
 
 
+
+                        </div>
+
+
+
+                            
                         </div>
 
 

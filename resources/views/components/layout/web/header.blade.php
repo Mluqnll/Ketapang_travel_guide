@@ -19,9 +19,9 @@
                     class="tr-icon ion-android-menu"></i> </button>
             <div class="logo">
                 <a href="index.html">
-                    <img class="logo logo-display"src="{{ url('public') }}/assets/images/logo-putih.png"
+                    <img class="logo logo-display"src="{{ url('public/web') }}/assets/images/logo-putih.png"
                         style="width:100 object-fit:contain" alt="">
-                    <img class="logo logo-scrolled" src="{{ url('public') }}/assets/images/logo-hitam.png"
+                    <img class="logo logo-scrolled" src="{{ url('public/web') }}/assets/images/logo-hitam.png"
                         style="width:100 object-fit:contain" alt="">
                 </a>
             </div>

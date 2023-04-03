@@ -4,11 +4,7 @@
             <div class="page-title-box">
                 <div class="row">
                     <div class="col">
-                        <h4 class="page-title">Analytics</h4>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0);">Dastyle</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
+                        <h4 class="page-title">Dashbord</h4>
                     </div>
                     <div class="col-auto align-self-center">
                         <a href="#" class="btn btn-sm btn-outline-primary" id="Dash_Date">
@@ -31,7 +27,7 @@
                 <div class="card-body">
                     <div class="row d-flex justify-content-center">
                         <div class="col">
-                            <p class="text-dark mb-1 font-weight-semibold">Sessions</p>
+                            <p class="text-dark mb-1 font-weight-semibold">Desa Wisata</p>
                             <h3 class="my-2">24k</h3>
                             <p class="mb-0 text-truncate text-muted"><span class="text-success"><i
                                         class="mdi mdi-trending-up"></i>8.5%</span> New Sessions Today</p>

@@ -11,35 +11,35 @@
     <meta name="keywords"
         content="animation, creative, digital, flex, marketing, minimal, one page, parallax, portfolio, responsive, revolution slider, startup, studio, video background">
     <title>KETAPANG TRAVEL GUIDE</title>
-    <link rel="shortcut icon" href="{{ url('public') }}/assets/images/logo.png">
+    <link rel="shortcut icon" href="{{ url('public/web') }}/assets/images/logo.png">
 
     <!-- Core Style Sheets -->
-    <link rel="stylesheet" href="{{ url('public') }}/assets/css/master.css">
+    <link rel="stylesheet" href="{{ url('public/web') }}/assets/css/master.css">
     <!-- Responsive Style Sheets -->
-    <link rel="stylesheet" href="{{ url('public') }}/assets/css/responsive.css">
+    <link rel="stylesheet" href="{{ url('public/web') }}/assets/css/responsive.css">
     <!-- Revolution Style Sheets -->
-    <link rel="stylesheet" type="text/css" href="{{ url('public') }}/revolution/css/settings.css">
-    <link rel="stylesheet" type="text/css" href="{{ url('public') }}/revolution/css/layers.css">
-    <link rel="stylesheet" type="text/css" href="{{ url('public') }}/revolution/css/navigation.css">
+    <link rel="stylesheet" type="text/css" href="{{ url('public/web') }}/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="{{ url('public/web') }}/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="{{ url('public/web') }}/revolution/css/navigation.css">
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1eO-IAC9PhPE5APzZDSs8W40ewuxnsu8"></script>
-    <script src="{{ url('public') }}/assets/js/jquery.min.js"></script>
-    <script src="{{ url('public') }}/assets/js/smoothscroll.js"></script>
-    <script src="{{ url('public') }}/assets/js/plugins.js"></script>
-    <script src="{{ url('public') }}/assets/js/master.js"></script>
-    <script src="{{ url('public') }}/assets/js/leaflet.defaultextent.js"></script>
+    <script src="{{ url('public/web') }}/assets/js/jquery.min.js"></script>
+    <script src="{{ url('public/web') }}/assets/js/smoothscroll.js"></script>
+    <script src="{{ url('public/web') }}/assets/js/plugins.js"></script>
+    <script src="{{ url('public/web') }}/assets/js/master.js"></script>
+    <script src="{{ url('public/web') }}/assets/js/leaflet.defaultextent.js"></script>
 
-    <script src="{{ url('public') }}/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script src="{{ url('public') }}/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="{{ url('public') }}/assets/revolution/js/revolution.extension.actions.min.js"></script>
-    <script src="{{ url('public') }}/assets/revolution/js/revolution.extension.carousel.min.js"></script>
-    <script src="{{ url('public') }}/assets/revolution/js/revolution.extension.kenburn.min.js"></script>
-    <script src="{{ url('public') }}/assets/revolution/js/revolution.extension.layeranimation.min.js"></script>
-    <script src="{{ url('public') }}/assets/revolution/js/revolution.extension.migration.min.js"></script>
-    <script src="{{ url('public') }}/assets/revolution/js/revolution.extension.navigation.min.js"></script>
-    <script src="{{ url('public') }}/assets/revolution/js/revolution.extension.parallax.min.js"></script>
-    <script src="{{ url('public') }}/assets/revolution/js/revolution.extension.slideanims.min.js"></script>
-    <script src="{{ url('public') }}/assets/revolution/js/revolution.extension.video.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.actions.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.carousel.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.kenburn.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.layeranimation.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.migration.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.navigation.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.parallax.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.slideanims.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.video.min.js"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
@@ -52,12 +52,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
 
-    <link rel="stylesheet" type="text/css" href="{{ url('public') }}/assets/css/leaflet.defaultextent.css">
-    <script src="{{ url('public') }}/assets/js/leaflet.defaultextent.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url('public/web') }}/assets/css/leaflet.defaultextent.css">
+    <script src="{{ url('public/web') }}/assets/js/leaflet.defaultextent.js"></script>
 
     <link rel="stylesheet"
-        href="{{ url('public') }}/assets/js/leaflet-panel-layers/dist/leaflet-panel-layers.min.css" />
-    <script src="{{ url('public') }}/assets/js/leaflet-panel-layers/dist/leaflet-panel-layers.src.js"></script>
+        href="{{ url('public/web') }}/assets/js/leaflet-panel-layers/dist/leaflet-panel-layers.min.css" />
+    <script src="{{ url('public/web') }}/assets/js/leaflet-panel-layers/dist/leaflet-panel-layers.src.js"></script>
 
 </head>
 
@@ -91,23 +91,23 @@
 
     <!--== Javascript Plugins ==-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1eO-IAC9PhPE5APzZDSs8W40ewuxnsu8"></script>
-    <script src="{{ url('public') }}/assets/js/jquery.min.js"></script>
-    <script src="{{ url('public') }}/assets/js/smoothscroll.js"></script>
-    <script src="{{ url('public') }}/assets/js/plugins.js"></script>
-    <script src="{{ url('public') }}/assets/js/master.js"></script>
+    <script src="{{ url('public/web') }}/assets/js/jquery.min.js"></script>
+    <script src="{{ url('public/web') }}/assets/js/smoothscroll.js"></script>
+    <script src="{{ url('public/web') }}/assets/js/plugins.js"></script>
+    <script src="{{ url('public/web') }}/assets/js/master.js"></script>
 
     <!-- Revolution js Files -->
-    <script src="{{ url('public') }}/revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script src="{{ url('public') }}/revolution/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="{{ url('public') }}/revolution/js/revolution.extension.actions.min.js"></script>
-    <script src="{{ url('public') }}/revolution/js/revolution.extension.carousel.min.js"></script>
-    <script src="{{ url('public') }}/revolution/js/revolution.extension.kenburn.min.js"></script>
-    <script src="{{ url('public') }}/revolution/js/revolution.extension.layeranimation.min.js"></script>
-    <script src="{{ url('public') }}/revolution/js/revolution.extension.migration.min.js"></script>
-    <script src="{{ url('public') }}/revolution/js/revolution.extension.navigation.min.js"></script>
-    <script src="{{ url('public') }}/revolution/js/revolution.extension.parallax.min.js"></script>
-    <script src="{{ url('public') }}/revolution/js/revolution.extension.slideanims.min.js"></script>
-    <script src="{{ url('public') }}/revolution/js/revolution.extension.video.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.actions.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.carousel.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.kenburn.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.layeranimation.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.migration.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.navigation.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.parallax.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.slideanims.min.js"></script>
+    <script src="{{ url('public/web') }}/revolution/js/revolution.extension.video.min.js"></script>
     <!--== Javascript Plugins End ==-->
 
     @stack('script')

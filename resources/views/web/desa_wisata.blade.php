@@ -1,8 +1,9 @@
 <x-web>
 
     @include('menu.menu')
+
     <section class="xxl-screen pt-0 pb-0 bg-flex-cover" id="home"
-        style="background-image: url(public/assets/images/1.jpg);">
+        style="background-image: url(public/web/assets/images/1.jpg);">
         <div class="hero-text-wrap xxl-screen">
             <div class="hero-text">
                 <div class="text-content-slider slick">
@@ -10,7 +11,7 @@
                         <div class="row">
                             <div class="col-md-8 centerize-col">
                                 <div class="all-padding-50 text-center">
-                                    <img src="{{ url('public') }}/assets/images/logo-putih.png" alt=""
+                                    <img src="{{ url('public/web') }}/assets/images/logo-putih.png" alt=""
                                         style="width:100%; height:auto; object-fit: cover; ">
                                 </div>
                             </div>
@@ -27,15 +28,12 @@
                 <div class="col-md-10 centerize-col text-center wow fadeInUp" data-wow-delay="0.1s">
                     <div class="section-title">
                         <hr class="center_line dark-bg">
-                        <p>
-                            ELECTRONIC KETAPANG TRAVEL GUIDE, e-KTG (beta 2.0), adalah portal resmi informasi pariwisata
-                            dan desa wisata di Kabupaten Ketapang
-                            yang terintegrasi dengan sistem JADESTA (Jaringan Desa Wisata) Kemenparekraf RI. ​Website
-                            ini dikelola bersama oleh DPC MASATA Ketapang,
-                            Prodi Teknologi Informasi Politeknik Negeri Ketapang, dan Pemerintah Daerah Kabupaten
-                            Ketapang melalui Dinas Pariwisata dan Kebudayaan,
-                            serta didukung penuh oleh Dinas Komunikasi dan Informatika.
-                        </p>
+                        @foreach ($detail as $detail)
+                            <p>
+                                {{ $detail->nama }}
+                            </p>
+                        @endforeach
+                        <br>
                         <p>
                             Silahkan KLIK pada nama desa wisata yang tersedia untuk menemukan beragam informasi paket
                             wisata dan fasilitas pendukung lainnya.
@@ -107,6 +105,7 @@
                     </strong>
                 </div>
             </div>
+        </div>
     </section>
     <!--== Blogs End ==-->
 </x-web>

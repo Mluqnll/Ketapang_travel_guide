@@ -9,12 +9,14 @@ use App\Http\Controllers\Admin\KalenderWisataController;
 use App\Http\Controllers\Admin\KontakController;
 use App\Http\Controllers\Admin\KategoriController;
 use App\Http\Controllers\Admin\DetailController;
+
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Web\WebDesaWisataController;
 use App\Http\Controllers\Web\WebKontakWisataController;
 use App\Http\Controllers\Web\WebKalenderWisataController;
 use App\Http\Controllers\Web\WebPetaWisataController;
 use App\Http\Controllers\Web\WebAtraksiWisataController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,6 +59,7 @@ Route::get('delete-galeri/{galeri}', [DesaWisataController::class, 'deleteGaleri
 
 Route::post('store-bulan', [KalenderWisataController::class, 'storeBulan']);
 
+
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'loginProcess']);
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
@@ -71,3 +74,9 @@ Route::resource('petawisata', WebPetaWisataController::class);
 Route::resource('atraksiwisata',WebAtraksiWisataController::class);
 
 Route::get('atraksi-wisata/{kategori}',[WebAtraksiWisataController::class,'index']);
+
+
+Route::get('login', [AuthController::class, 'login'])->name('login');
+Route::post('login', [AuthController::class, 'loginProcess']);
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+

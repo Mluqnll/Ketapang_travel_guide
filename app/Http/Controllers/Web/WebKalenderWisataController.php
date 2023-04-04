@@ -15,7 +15,7 @@ class WebKalenderWisataController extends Controller
         $data['list_kategori'] = Kategori::all();
         $data['list_bulan'] = Bulan::all();
         $data['list_kalender_wisata'] = KalenderWisata::all();
-        return view('web.kalender_wisata', $data);
+        return view('web.kalender-wisata.kalender_wisata', $data);
     }
 
     public function create()
@@ -30,9 +30,11 @@ class WebKalenderWisataController extends Controller
     }
 
 
-    public function show(string $id)
+    public function show($kalender_wisata)
     {
-        //
+        $data['kalender_wisata'] = KalenderWisata::find($kalender_wisata);
+        $data['list_kategori'] = Kategori::all();
+        return view('web.kalender-wisata.detail_kalender', $data);
     }
 
 

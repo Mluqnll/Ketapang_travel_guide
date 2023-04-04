@@ -8,20 +8,20 @@ use App\Models\KontakWisata;
 
 class KontakController extends Controller
 {
-   
+
     public function index()
     {
         $data['list_kontak_wisata'] = KontakWisata::all();
         return view('admin.kontak.index', $data);
     }
 
-   
+
     public function create()
     {
         return view('admin.kontak.create');
     }
 
-    
+
     public function store(Request $request)
     {
         $kontak_wisata = New KontakWisata;
@@ -36,7 +36,6 @@ class KontakController extends Controller
         return redirect('admin/kontak')->with('primary', 'Data Berhasil Disimpan');
     }
 
-   
     public function show($kontak_wisata)
     {
         $data['kontak_wisata'] = KontakWisata::find($kontak_wisata);
@@ -44,7 +43,6 @@ class KontakController extends Controller
         return view('admin.kontak.show', $data);
     }
 
-    
     public function edit($kontak_wisata)
     {
         $data['kontak_wisata'] = KontakWisata::find($kontak_wisata);
@@ -52,7 +50,7 @@ class KontakController extends Controller
         return view('admin.kontak.edit', $data);
     }
 
-   
+
     public function update($kontak_wisata)
     {
         $kontak_wisata = KontakWisata::find($kontak_wisata);
@@ -67,7 +65,6 @@ class KontakController extends Controller
         return redirect('admin/kontak')->with('primary', 'Data Berhasil Disimpan');
     }
 
-  
     public function destroy($kontak_wisata)
     {
         KontakWisata::destroy($kontak_wisata);

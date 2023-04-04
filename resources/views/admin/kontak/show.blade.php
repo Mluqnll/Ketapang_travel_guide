@@ -32,7 +32,7 @@
                                             <li class="">
                                                 Tahun Event
                                             </li>
-                                            
+
 
 
                                         </ul>
@@ -51,7 +51,7 @@
                                             <li class="">
                                                 : {{ $kalender_wisata->tahun }}
                                             </li>
-                                            
+
 
                                         </ul>
                                     </div>

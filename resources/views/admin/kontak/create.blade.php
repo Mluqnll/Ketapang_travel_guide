@@ -17,7 +17,7 @@
                                 <input type="text" class="form-control" name="nama" placeholder="Nama Penanggung Jawab">
                             </div>
 
-                           
+
                         </div>
 
                         <div class="form-group row">
@@ -26,7 +26,6 @@
                                 <input type="text" class="form-control" name="jabatan" placeholder="Jabatan Penanggung Jawab">
                             </div>
 
-                           
                         </div>
 
                         <div class="form-group row">
@@ -35,7 +34,7 @@
                                 <input type="text" class="form-control" name="link_wa" placeholder="Nama Akun/Link Akun Sosmed Whatsapp">
                             </div>
 
-                           
+
                         </div>
 
                         <div class="form-group row">
@@ -44,7 +43,6 @@
                                 <input type="text" class="form-control" name="link_fb" placeholder="Nama Akun/Link Akun Sosmed Facebook">
                             </div>
 
-                           
                         </div>
 
                         <div class="form-group row">
@@ -53,9 +51,14 @@
                                 <input type="text" class="form-control" name="link_ig" placeholder="Nama Akun/Link Akun Sosmed Instagram">
                             </div>
 
+
+                        </div>
+
+
                            
                         </div>
                         
+
 
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left">Foto</label>
@@ -63,10 +66,16 @@
                                 <input type="file" class="form-control" name="foto" accept=".jpg, .png, .jpeg">
                             </div>
 
+
+
+                        </div>
+
+
+
                             
                         </div>
 
-                       
+
 
                         <div class="form-group row mb-0">
                             <div class="col-sm-12">

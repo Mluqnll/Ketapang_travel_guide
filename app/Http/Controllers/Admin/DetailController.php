@@ -17,7 +17,7 @@ class DetailController extends Controller
 
         return view('admin.detail_web.index', $data);
     }
-   
+
     public function store(Request $request)
     {
         $detail = New Detail;

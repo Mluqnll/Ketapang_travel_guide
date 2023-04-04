@@ -3,17 +3,15 @@
         <div class="container">
             <div class="row wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-md-8 centerize-col text-center">
-                    <div class="footer-logo">
-                        <a href="#"><img src="{{url ('public')}}/assets/images/logo-putih.png"
-                                class="img-responsive centerize-col" alt="Footer Logo" /></a>
+                    <div class="copy-right">© 2022 - {{ date('Y') }}
+                        <span class="primary-color">KETAPANG TRAVEL GUIDE </span> by Teknologi Informasi
                     </div>
-                    <div class="copy-right">© 2022 - {{date('Y')}} <span class="primary-color">KETAPANG TRAVEL GUIDE</span> by Teknologi Informasi</div>
-                    <ul class="social-media corporate mt-30 float-none">
-                        <li><a href="#" class="icofont icofont-facebook"></a></li>
-                        <li><a href="#" class="icofont icofont-twitter"></a></li>
-                        <li><a href="#" class="icofont icofont-behance"></a></li>
-                        <li><a href="#" class="icofont icofont-dribble"></a></li>
-                        <li><a href="#" class="icofont icofont-linkedin"></a></li>
+                    <ul class="" style="text-align: center">
+                        <img src="{{url('public/web')}}/assets/images/Ketapang.png" style="height: 5%; width: 5%;" alt="">
+                        <img src="{{url('public/web')}}/assets/images/kominfo.png" style="height: 10%; width: 10%;" alt="">
+                        <img src="{{url('public/web')}}/assets/images/Logo Politap.png" style="height: 5%; width: 5%;" alt="">
+                        <img src="{{url('public/web')}}/assets/images/masata.png" style="height: 5%; width: 5%;" alt="">
+                        <img src="{{url('public/web')}}/assets/images/ti.png" style="height: 5%; width: 5%;" alt="">
                     </ul>
                 </div>
             </div>

@@ -7,13 +7,13 @@
             <span>
                 <img src="{{ url('public/admin') }}/assets/images/logo.png" alt="logo-small" class="logo-sm">
             </span>
-           
+
         </a>
     </div>
     <!--end logo-->
     <div class="menu-content h-100" data-simplebar>
         <ul class="metismenu left-sidenav-menu">
-            
+
             <x-layout.sidebar.menu-item url="admin" label="Dashboard" icon="fa fa-home" />
             <x-layout.sidebar.menu-item url="admin/pengelola" label="Pengelola" icon="fa fa-user" />
             <x-layout.sidebar.menu-item url="admin/desa-wisata" label="Desa Wisata" icon="fa fa-globe" />

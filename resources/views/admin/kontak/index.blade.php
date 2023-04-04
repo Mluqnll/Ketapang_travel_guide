@@ -7,7 +7,6 @@
                     <a href="{{ url('admin/kontak/create') }}" class="btn btn-primary float-right mb-10"> <span
                             class="fa fa-plus"></span> Tambah Data</a>
 
-                    
                     <h4 class="card-title">Data Penanggung Jawab</h4>
 
                 </div>
@@ -32,7 +31,7 @@
                                     <td class="text-center">{{ $loop->iteration }}</td>
                                     <td class="text-center">
                                         <div class="btn-group">
-                                           
+
                                             <x-layout.button.edit-button url="admin/kontak"
                                                 id="{{ $kontak_wisata->id }}" />
                                             <x-layout.button.delete-button url="admin/kontak"
@@ -47,7 +46,11 @@
                                         <a href="{{ $kontak_wisata->link_ig }}"><span class="lab la-instagram mr-2 text-secondary font-22 align-middle"></span></a>
                                     </td>
                                     <td class="text-center">
+
+                                        <img src="{{ url("public/$kontak_wisata->foto") }}" class="rounded" style="object-fit: cover; position: static; width: 50%; height: 200px;">
+
                                         <img src="{{ url("public/$kontak_wisata->foto") }}" class="rounded" style="object-fit: cover; position: static; width: 50%; height: 200px;">    
+
                                     </td>
                                 </tr>
                             @endforeach

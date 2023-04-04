@@ -17,7 +17,7 @@
                                 <th class="text-center">No</th>
                                 <th class="text-center">Aksi</th>
                                 <th class="text-center">Nama Kategori</th>
-                                
+
                             </tr>
                         </thead>
                         <tbody>

@@ -16,9 +16,7 @@ use App\Http\Controllers\Web\WebKontakWisataController;
 use App\Http\Controllers\Web\WebKalenderWisataController;
 use App\Http\Controllers\Web\WebPetaWisataController;
 use App\Http\Controllers\Web\WebAtraksiWisataController;
-
 use App\Http\Controllers\Admin\GaleriController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -42,8 +40,8 @@ Route::prefix('admin')->middleware('auth')->group(function(){
     Route::resource('pengelola', PengelolaController::class);
 
     Route::resource('desa-wisata', DesaWisataController::class);
-    
-  
+
+
 
     Route::resource('atraksi-wisata', AtraksiWisataController::class);
     Route::get('atraksi-wisata/show-atraksi-wisata/{atraksi_wisata}', [AtraksiWisataController::class, 'detail']);
@@ -74,6 +72,7 @@ Route::resource('desawisata', WebDesaWisataController::class);
 Route::resource('kontakwisata', WebKontakWisataController::class);
 Route::resource('kalenderwisata', WebKalenderWisataController::class);
 Route::resource('petawisata', WebPetaWisataController::class);
+Route::resource('atraksiwisata',WebAtraksiWisataController::class);
 
 Route::get('atraksi-wisata/{kategori}',[WebAtraksiWisataController::class,'index']);
 

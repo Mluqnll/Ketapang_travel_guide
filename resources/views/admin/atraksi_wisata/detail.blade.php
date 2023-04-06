@@ -8,13 +8,7 @@
                 <div class="card-body">
                     <div class="dastyle-profile">
                         <div class="row">
-                            <div class="col-lg-6 align-self-center mb-3 mb-lg-0">
-                                <div class="dastyle-profile-main">
-                                    <img src="{{ url("public/$atraksi_wisata->foto") }}" class="rounded"
-                                        style="width:100%">
-                                </div>
-                            </div>
-                            <div class="col-lg-6 align-self-center">
+                            <div class="col-lg-12 align-self-center mb-3 mb-lg-0">
                                 <div class="dastyle-profile-main">
                                     <img src="{{ url("public/$atraksi_wisata->foto") }}" class="rounded"
                                         style="width:100%">

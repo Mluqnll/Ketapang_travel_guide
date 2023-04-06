@@ -9,7 +9,7 @@ use App\Models\Galeri;
 
 class DesaWisataController extends Controller
 {
-    
+
     public function index()
     {
         $data['list_desa_wisata'] = DesaWisata::all();
@@ -42,7 +42,7 @@ class DesaWisataController extends Controller
         return view('admin.desa_wisata.show', $data);
     }
 
-    
+
     public function edit($id)
     {
         $data['desa_wisata'] = DesaWisata::find($id);
@@ -50,7 +50,7 @@ class DesaWisataController extends Controller
         return view('admin.desa_wisata.edit', $data);
     }
 
-    
+
     public function update($desa_wisata)
     {
         $desa_wisata = DesaWisata::find($desa_wisata);
@@ -65,7 +65,7 @@ class DesaWisataController extends Controller
         return redirect('admin/desa-wisata')->with('success', 'Data Berhasil Di Edit');
     }
 
-   
+
     public function destroy($desa_wisata)
     {
         DesaWisata::destroy($desa_wisata);

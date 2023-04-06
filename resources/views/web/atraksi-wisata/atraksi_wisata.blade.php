@@ -73,7 +73,7 @@
                         <div class="post-wrap">
                             <div class="post-img">
                                 <div class="item">
-                                    <img class="img-responsive" style="width:100% ; height:200%; object-fit: cover"
+                                    <img class="img-responsive" style="width:100% ; height:200px; object-fit: cover"
                                         src="{{ url("public/$atraksi_wisata->foto") }}" alt="" />
                                 </div>
                             </div>

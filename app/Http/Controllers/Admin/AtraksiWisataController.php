@@ -10,12 +10,12 @@ use App\Models\AtraksiWisata;
 class AtraksiWisataController extends Controller
 {
     public function index()
-    {   
+    {
         $data['list_kategori'] = Kategori::all();
         return view('admin.atraksi_wisata.index', $data);
     }
 
-    
+
     public function create()
     {
         $data["list_kategori"] = Kategori::all();
@@ -90,9 +90,11 @@ class AtraksiWisataController extends Controller
         return view('admin.atraksi_wisata.detail', $data);
     }
 
-   
-    public function destroy(string $id)
+
+    public function destroy($atraksi_wisata)
     {
-        //
+        AtraksiWisata::destroy($atraksi_wisata);
+
+        return back()->with('danger', 'Data Berhasil Dihapus');
     }
 }

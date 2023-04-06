@@ -49,8 +49,6 @@
 
                                         <img src="{{ url("public/$kontak_wisata->foto") }}" class="rounded" style="object-fit: cover; position: static; width: 50%; height: 200px;">
 
-                                        <img src="{{ url("public/$kontak_wisata->foto") }}" class="rounded" style="object-fit: cover; position: static; width: 50%; height: 200px;">    
-
                                     </td>
                                 </tr>
                             @endforeach

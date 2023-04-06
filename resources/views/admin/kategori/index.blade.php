@@ -7,7 +7,7 @@
                         data-target="#modaltambah">
                         <span class="fa fa-plus"></span> Tambah Kategori
                     </button>
-                    <h4 class="card-title">Data Pengelola</h4>
+                    <h4 class="card-title">Data Kategori</h4>
 
                 </div>
 

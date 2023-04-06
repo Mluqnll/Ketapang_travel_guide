@@ -5,7 +5,7 @@
                 <div class="card-header">
                     <a href="{{ url('admin/desa-wisata/create') }}" class="btn btn-primary float-right mb-10"> <span
                             class="fa fa-plus"></span> Tambah Data</a>
-                    <h4 class="card-title">Data Pengelola</h4>
+                    <h4 class="card-title">Data Desa Wisata</h4>
 
                 </div>
 

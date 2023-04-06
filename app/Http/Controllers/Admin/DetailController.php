@@ -14,8 +14,7 @@ class DetailController extends Controller
     public function index()
     {
         $data['list_detail'] = Detail::all();
-
-        return view('admin.detail_web.index', $data);
+        return view('admin.detail.index', $data);
     }
 
     public function store(Request $request)

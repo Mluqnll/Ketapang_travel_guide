@@ -25,8 +25,6 @@
                         <tbody>
                             @foreach ($list_atraksi_wisata as $atraksi_wisata)
                             @if ($atraksi_wisata->id_kategori == $kategori->id)
-                                
-                            
                                 <tr>
                                     <td class="text-center">{{ $loop->iteration }}</td>
                                     <td class="text-center">
@@ -42,7 +40,7 @@
                                     <td class="text-center">{{ $atraksi_wisata->nama_pengelola }}</td>
                                     <td class="text-center">{{ $atraksi_wisata->hari_buka }} / {{ $atraksi_wisata->jam_buka }} - {{ $atraksi_wisata->jam_tutup }}</td>
                                     <td class="text-center">{{ $atraksi_wisata->destinasi }}</td>
-                                    
+
                                 </tr>
                                 @endif
                             @endforeach

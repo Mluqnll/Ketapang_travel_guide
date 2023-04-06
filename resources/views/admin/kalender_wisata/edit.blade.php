@@ -59,7 +59,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label text-left">Nama Event</label>
+                            <label class="col-sm-2 col-form-label text-left">Deskripsi</label>
                             <div class="col-sm-10">
                                 <textarea class="form-control mt-15" rows="3" name="deskripsi">{{ $kalender_wisata->deskripsi }}</textarea>
                             </div>

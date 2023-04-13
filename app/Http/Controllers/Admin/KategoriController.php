@@ -31,4 +31,10 @@ class KategoriController extends Controller
         return back()->with('info', 'Data Berhasil di Edit');
     }
 
+    public function destroy($kategori)
+    {
+        Kategori::destroy($kategori);
+
+        return back()->with('danger', 'Data Berhasil Dihapus');
+    }
 }

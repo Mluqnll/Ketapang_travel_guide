@@ -48,6 +48,7 @@ $app = require_once __DIR__.'/bootstrap/app.php';
 $app->bind('path.public', function(){
     return __DIR__."/public";
 });
+
 $kernel = $app->make(Kernel::class);
 
 $response = $kernel->handle(

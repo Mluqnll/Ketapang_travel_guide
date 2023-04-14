@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\KalenderWisataController;
 use App\Http\Controllers\Admin\KontakController;
 use App\Http\Controllers\Admin\KategoriController;
 use App\Http\Controllers\Admin\DetailController;
+use App\Http\Controllers\Admin\KategoriFasilitasController;
+use App\Http\Controllers\Admin\FasilitasController;
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Web\WebDesaWisataController;
@@ -29,9 +31,7 @@ use App\Http\Controllers\Admin\GaleriController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::prefix('admin')->middleware('auth')->group(function(){
 
@@ -53,6 +53,11 @@ Route::prefix('admin')->middleware('auth')->group(function(){
     Route::resource('kategori', KategoriController::class);
 
     Route::resource('detail-web', DetailController::class);
+
+    Route::resource('kategori-fasilitas', KategoriFasilitasController::class);
+    Route::resource('fasilitas', FasilitasController::class);
+    Route::get('fasilitas/create/{kategori_fasilitas}', [FasilitasController::class, 'create']);
+    Route::get('fasilitas/show-fasilitas/{fasilitas}', [FasilitasController::class, 'detail']);
 
 });
 Route::post('store-galeri', [DesaWisataController::class, 'storeGaleri']);

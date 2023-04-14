@@ -1,7 +1,4 @@
 <x-web>
-
-
-    @include('menu.menu')
     <div class="remove-padding transition-none" id="home">
         <div id="rev_slider_1078_2_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
             data-alias="classic4export" data-source="gallery"
@@ -41,13 +38,13 @@
     <section class="white-bg" id="pricing">
         <div class="container">
             <div class="section-title wow fadeInUp text-center" data-wow-delay="0.1s">
-                <strong style="font-size: 20px; font-weight:bold; color:grey">{{ $kategori->nama }} Di Kabupaten
+                <strong style="font-size: 20px; font-weight:bold; color:grey"> Di Kabupaten
                     Ketapang
                 </strong>
                 <hr class="center_line grey-bg">
             </div>
             <div class="row mt-50">
-                @foreach ($list_atraksi_wisata as $atraksi_wisata)
+                {{-- @foreach ($list_atraksi_wisata as $atraksi_wisata)
                     <div class="col-md-4 blog-list wow fadeInLeft" data-wow-delay="0.1s">
                         <div class="post-wrap">
                             <div class="post-img">
@@ -62,9 +59,8 @@
                             <hr class="grey-bg">
                         </div>
                     </div>
-                @endforeach
+                @endforeach --}}
             </div>
         </div>
     </section>
-
 </x-web>

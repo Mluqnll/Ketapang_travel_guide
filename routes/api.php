@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\Api\AtraksiwisataApiController;
 use App\Http\Controllers\Api\DesawisataApiController;
+use App\Http\Controllers\Api\AtraksiwisataApiController;
+use App\Http\Controllers\Api\KalenderwisataApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('desawisata/all', [DesawisataApiController::class,'getAllData']);
 Route::get('atraksiwisata/all', [AtraksiwisataApiController::class,'getAllData']);
+Route::get('kalenderwisata/all', [KalenderwisataApiController::class,'getAllData']);

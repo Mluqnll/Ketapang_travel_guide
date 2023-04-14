@@ -38,6 +38,13 @@
                 </li>
                 <li><a class="page-scroll" href="{{ url('kalenderwisata') }}">Kalender</a></li>
                 <li><a class="page-scroll" href="{{ url('petawisata') }}">Peta Wisata</a></li>
+                {{-- <li class="dropdown">
+                    <a class="dropdown-toggle page-scroll" data-toggle="dropdown">
+                        Fasilitas
+                    </a>
+                    @yield('menu')
+                </li> --}}
+                <li><a class="page-scroll" href="{{ url('fasilitaswisata') }}">Fasilitas</a></li>
                 <li><a class="page-scroll" href="{{ url('kontakwisata') }}">Info & Kontak</a></li>
             </ul>
         </div>

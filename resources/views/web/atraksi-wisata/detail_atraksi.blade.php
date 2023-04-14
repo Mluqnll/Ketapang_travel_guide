@@ -2,7 +2,7 @@
 
     @include('menu.menu')
 
-    <div class="remove-padding transition-none" id="home">
+    {{-- <div class="remove-padding transition-none" id="home">
         <div id="rev_slider_1078_2_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
             data-alias="classic4export" data-source="gallery"
             style="margin:0px auto;background-color:#000000;padding:0px;margin-top:0px;margin-bottom:0px;">
@@ -33,7 +33,19 @@
             <div class="tp-bannertimer" style="height: 3px; background-color: rgba(255, 255, 255, 0.25);">
             </div>
         </div>
-    </div>
+    </div> --}}
+    <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80"
+        data-parallax-bg-image="{{ url('public/web') }}/assets/images/d.jpg" data-parallax-speed="0.5"
+        data-parallax-direction="up">
+        <div class="overlay-bg"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 centerize-col text-center">
+                    <h5 class="font-50px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span
+                            class="font-100">Ketapang Travel Guide</span></h5>
+                </div>
+            </div>
+    </section>
 
     <section class="white-bg">
         <div class="container">

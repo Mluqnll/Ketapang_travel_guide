@@ -25,7 +25,7 @@
             <x-layout.sidebar.menu-item url="admin/kalender-wisata" label="Kalender Wisata"
                 icon="fa fa-calendar" />
             <x-layout.sidebar.menu-item url="admin/kontak" label="Kontak" icon="fa fa-phone" />
-            <x-layout.sidebar.menu-item url="admin/detail-web" label="Detail" icon="fa fa-info" />
+            <x-layout.sidebar.menu-item url="admin/detail" label="Detail" icon="fa fa-info" />
 
         </ul>
 

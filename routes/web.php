@@ -18,6 +18,7 @@ use App\Http\Controllers\Web\WebKontakWisataController;
 use App\Http\Controllers\Web\WebKalenderWisataController;
 use App\Http\Controllers\Web\WebPetaWisataController;
 use App\Http\Controllers\Web\WebAtraksiWisataController;
+use App\Http\Controllers\Web\WebFasilitasController;
 use App\Http\Controllers\Admin\GaleriController;
 
 /*
@@ -52,7 +53,7 @@ Route::prefix('admin')->middleware('auth')->group(function(){
 
     Route::resource('kategori', KategoriController::class);
 
-    Route::resource('detail-web', DetailController::class);
+    Route::resource('detail', DetailController::class);
 
     Route::resource('kategori-fasilitas', KategoriFasilitasController::class);
     Route::resource('fasilitas', FasilitasController::class);
@@ -66,8 +67,7 @@ Route::get('delete-galeri/{galeri}', [DesaWisataController::class, 'deleteGaleri
 Route::post('store-bulan', [KalenderWisataController::class, 'storeBulan']);
 
 
-Route::get('login', [AuthController::class, 'login'])->name('login');
-Route::post('login', [AuthController::class, 'loginProcess']);
+ Route::post('login', [AuthController::class, 'loginProcess']);
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 
@@ -78,6 +78,7 @@ Route::resource('kontakwisata', WebKontakWisataController::class);
 Route::resource('kalenderwisata', WebKalenderWisataController::class);
 Route::resource('petawisata', WebPetaWisataController::class);
 Route::resource('atraksiwisata',WebAtraksiWisataController::class);
+Route::resource('fasilitaswisata', WebFasilitasController::class);
 
 Route::get('atraksi-wisata/{kategori}',[WebAtraksiWisataController::class,'index']);
 

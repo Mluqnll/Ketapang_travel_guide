@@ -10,9 +10,8 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 centerize-col">
-                                <div class="all-padding-50 text-center">
-                                    <img src="{{ url('public/web') }}/assets/images/logo-putih.png" alt=""
-                                        style="width:100%; height:auto; object-fit: cover; ">
+                                <div class="all-padding-50 text-center" >
+                                    <img src="{{ url('public/web') }}/assets/images/tiga.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -77,7 +76,7 @@
                                                 href="{{ url("$desa_wisata->link_jadesta") }}">{{ $desa_wisata->nama_desa_wisata }}</a>
                                         </h3>
                                         <p>
-                                            {{ url("$desa_wisata->deskripsi") }}
+                                            {{ "$desa_wisata->deskripsi" }}
                                         </p>
                                     </div>
                                 </div>
@@ -85,7 +84,7 @@
                         </div>
                     @endforeach
                 </div>
-            </div>
+            </div> <br>
             <div class="container">
                 <div class="text-center">
                     <strong style="color: rgb(6, 6, 6)">{{ $list_desa_wisata->onEachSide(1)->links() }}</strong>

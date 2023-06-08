@@ -1,6 +1,5 @@
 <x-web>
 
-
     @include('menu.menu')
     <div class="remove-padding transition-none" id="home">
         <div id="rev_slider_1078_2_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
@@ -24,9 +23,10 @@
                         <!-- LAYER NR. 1 -->
                         <div class="hero-text-wrap">
                             <center>
-                                <h3 style="color: white; font-weight:10px; margin-top:45vh"></h3>
-                                <img src="{{ url('public/web') }}/assets/images/logo-putih.png" alt=""
-                                    style="width:50%; height:auto; object-fit: cover; ">
+                                <h3 style="color: white; font-weight:10px; margin-top:30vh"></h3>
+                                {{-- <img src="{{ url('public/web') }}/assets/images/logo-putih.png" alt=""
+                                    style="width:50%; height:auto; object-fit: cover; "> --}}
+                                    <img  src="{{ url('public/web') }}/assets/images/tiga.png" style="width:70%; height:auto; object-fit: cover;" alt="">
                             </center>
                         </div>
 
@@ -57,7 +57,7 @@
                                 </div>
                             </div>
                             <div class="post-text">
-                                <a href="{{ url("atraksiwisata/$atraksi_wisata->id") }}">{{ $atraksi_wisata->nama }}</a>
+                                <a href="{{ url("atraksi-wisata/$atraksi_wisata->id") }}">{{ $atraksi_wisata->nama }}</a>
                             </div>
                             <hr class="grey-bg">
                         </div>

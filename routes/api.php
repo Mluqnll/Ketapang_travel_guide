@@ -23,5 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('desawisata/all', [DesawisataApiController::class,'getAllData']);
-Route::get('atraksiwisata/all', [AtraksiwisataApiController::class,'getAllData']);
-Route::get('kalenderwisata/all', [KalenderwisataApiController::class,'getAllData']);
+Route::get('wisataalam/all', [AtraksiwisataApiController::class,'WisataAlam']);
+Route::get('wisatabudaya/all', [AtraksiwisataApiController::class,'WisataBudaya']);
+Route::get('wisatabuatan/all', [AtraksiwisataApiController::class,'WisataBuatan']);
+Route::get('januari/all', [KalenderwisataApiController::class,'Januari']);

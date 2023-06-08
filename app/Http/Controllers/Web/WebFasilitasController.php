@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\Fasilitas;
+use App\Models\Kategori;
+use App\Models\KategoriFasilitas;
 use Illuminate\Http\Request;
 
 class WebFasilitasController extends Controller
@@ -10,9 +13,13 @@ class WebFasilitasController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($kategori_fasilitas)
     {
-        return view('web.fasilitas.fasilitas');
+        $data['list_kategori'] = Kategori::all();
+        $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
+        $data['kategori_fasilitas'] = KategoriFasilitas::find($kategori_fasilitas);
+        $data['list_fasilitas']= Fasilitas::where('id_kategori_fasilitas', $kategori_fasilitas)->get();
+        return view('web.fasilitas.fasilitas', $data);
     }
 
     /**
@@ -34,9 +41,13 @@ class WebFasilitasController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($fasilitas)
     {
-        //
+        $data['fasilitas'] = Fasilitas::find($fasilitas);
+        
+        $data['list_kategori'] = Kategori::all();
+        $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
+        return view('web.fasilitas.detail_fasilitas', $data);
     }
 
     /**

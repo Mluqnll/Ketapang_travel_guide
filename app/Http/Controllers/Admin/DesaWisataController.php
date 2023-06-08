@@ -65,6 +65,16 @@ class DesaWisataController extends Controller
         return redirect('admin/desa-wisata')->with('success', 'Data Berhasil Di Edit');
     }
 
+    public function updateFoto($desa_wisata)
+    {
+        $desa_wisata = DesaWisata::find($desa_wisata);
+        $desa_wisata->handleUploadFoto1();
+        $desa_wisata->handleUploadFoto2();
+        $desa_wisata->handleUploadFoto3();
+        $desa_wisata->save();
+
+        return back()->with('success', 'Data Berhasil Di Tambah');
+    }
 
     public function destroy($desa_wisata)
     {
@@ -73,20 +83,9 @@ class DesaWisataController extends Controller
         return back()->with('danger', 'Data Berhasil Dihapus');
     }
 
-    public function storeGaleri(Request $request)
+    public function deleteFoto($desa_wisata)
     {
-        $galeri = New Galeri;
-        $galeri->id_desa_wisata = request('id_desa_wisata');
-        $galeri->handleUploadFoto();
-        $galeri->save();
-
-        return back();
-    }
-
-    public function deleteGaleri($galeri)
-    {
-        Galeri::destroy($galeri);
-
-        return back()->with('danger', 'Data Galeri Berhasil Dihapus');
+        DesaWisata::destroy($desa_wisata);
+        return back()->with('danger', 'Data Foto Berhasil Dihapus');
     }
 }

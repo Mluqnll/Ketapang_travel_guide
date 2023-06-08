@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\KategoriFasilitas;
 use Illuminate\Http\Request;
 use App\Models\Kategori;
 use App\Models\AtraksiWisata;
@@ -15,17 +16,26 @@ class WebAtraksiWisataController extends Controller
     public function index($kategori)
     {
         $data['kategori']=Kategori::find($kategori);
-        $data['list_atraksi_wisata']=AtraksiWisata::where('id_kategori', $kategori)->get();
+
+        $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
         $data['list_kategori'] = Kategori::all();
+
+        $data['list_atraksi_wisata']=AtraksiWisata::where('id_kategori', $kategori)->get();
         return view ('web.atraksi-wisata.atraksi_wisata', $data);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function atraksi($kategori)
     {
-        //
+        $data['kategori']=Kategori::find($kategori);
+
+        $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
+        $data['list_kategori'] = Kategori::all();
+
+        $data['list_atraksi_wisata']=AtraksiWisata::where('id_kategori', $kategori)->get();
+        return view ('web.atraksi-wisata.atraksi', $data);
     }
 
     /**
@@ -41,8 +51,12 @@ class WebAtraksiWisataController extends Controller
      */
     public function show($atraksi_wisata)
     {
+        // $data['recent_wisata'] = AtraksiWisata::orderBy('id','DESC')->take(3)->get();
         $data['atraksi_wisata'] = AtraksiWisata::find($atraksi_wisata);
+
         $data['list_kategori'] = Kategori::all();
+        $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
+        // return $data;
         return view('web.atraksi-wisata.detail_atraksi', $data);
     }
 

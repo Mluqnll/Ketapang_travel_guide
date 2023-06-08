@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\Fasilitas;
+use App\Models\KategoriFasilitas;
 use Illuminate\Http\Request;
 use App\Models\Kategori;
 use App\Models\DesaWisata;
@@ -13,14 +15,19 @@ class WebPetaWisataController extends Controller
     public function index()
     {
         $data['list_kategori'] = Kategori::all();
+        $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
         $data['list_desa_wisata'] =DesaWisata::all();
         $data['list_atraksi_wisata']=AtraksiWisata::all();
+        $data['list_fasilitas_wisata']=Fasilitas::all();
         return view('web.peta_wisata', $data);
     }
 
-    public function create()
+    public function peta()
     {
-        //
+        $data['list_desa_wisata'] =DesaWisata::all();
+        $data['list_atraksi_wisata']=AtraksiWisata::all();
+        $data['list_fasilitas_wisata']=Fasilitas::all();
+        return view('web.peta', $data);
     }
 
 

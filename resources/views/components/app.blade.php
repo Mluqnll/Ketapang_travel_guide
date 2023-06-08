@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,13 +9,13 @@
         <meta content="" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        
+
         <link rel="shortcut icon" href="{{ url('public/admin') }}/assets/images/user.png">
 
-        
+
         <link href="{{ url('public/admin') }}/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet">
 
-        
+
         <link href="{{ url('public/admin') }}/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="{{ url('public/admin') }}/assets/css/jquery-ui.min.css" rel="stylesheet">
         <link href="{{ url('public/admin') }}/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
@@ -26,22 +25,22 @@
 
         <link href="{{ url('public/admin') }}/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
         <link href="{{ url('public/admin') }}/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-        <link href="{{ url('public/admin') }}/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" /> 
+        <link href="{{ url('public/admin') }}/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
     </head>
 
     <body class="dark-sidenav">
-        
+
        <x-layout.sidebar />
-        
-        
+
+
 
         <div class="page-wrapper">
-            
-            <x-layout.header />
-            
 
-            
+            <x-layout.header />
+
+
+
             <div class="page-content">
                 <div class="container-fluid mb-10">
                     <div class="row">
@@ -54,16 +53,16 @@
                 </div>
 
                 <x-layout.footer />
-                
+
             </div>
-            
+
         </div>
-        
-
-        
 
 
-        
+
+
+
+
         <script src="{{ url('public/admin') }}/assets/js/jquery.min.js"></script>
         <script src="{{ url('public/admin') }}/assets/js/bootstrap.bundle.min.js"></script>
         <script src="{{ url('public/admin') }}/assets/js/metismenu.min.js"></script>
@@ -79,7 +78,7 @@
         <script src="{{ url('public/admin') }}/plugins/jvectormap/jquery-jvectormap-us-aea-en.js"></script>
         <script src="{{ url('public/admin') }}/assets/pages/jquery.analytics_dashboard.init.js"></script>
 
-        
+
         <script src="{{ url('public/admin') }}/assets/js/app.js"></script>
 
         <script src="{{ url('public/admin') }}/plugins/datatables/jquery.dataTables.min.js"></script>
@@ -96,11 +95,11 @@
         <script src="{{ url('public/admin') }}/plugins/datatables/responsive.bootstrap4.min.js"></script>
         <script src="{{ url('public/admin') }}/assets/pages/jquery.datatable.init.js"></script>
 
-        <script src="{{ url('public/admin') }}/plugins/leaflet/leaflet.js"></script> 
+        <script src="{{ url('public/admin') }}/plugins/leaflet/leaflet.js"></script>
         <script src="{{ url('public/admin') }}/plugins/lightpick/lightpick.js"></script>
-        <script src="{{ url('public/admin') }}/assets/pages/jquery.profile.init.js"></script> 
+        <script src="{{ url('public/admin') }}/assets/pages/jquery.profile.init.js"></script>
 
-        
+
     </body>
 
 </html>

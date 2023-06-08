@@ -20,7 +20,7 @@ class KalenderwisataResource extends JsonResource
             'Deskripsi' => $this->deskripsi,
             'Tempat' => $this->tempat,
             'Tahun' => $this->tahun,
-            'Foto' => $this->foto,
+            'Foto' => url("public/$this->foto"),
             "Sumber Foto" => $this->sumber_foto
         ];
     }

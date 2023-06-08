@@ -10,9 +10,10 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 centerize-col">
-                                <div class="all-padding-50 text-center">
-                                    <img src="{{ url('public/web') }}/assets/images/logo-putih.png" alt=""
-                                        style="width:100%; height:auto; object-fit: cover; ">
+                                <div class="all-padding-50 text-center" style="display:flex;">
+                                    {{-- <img src="{{ url('public/web') }}/assets/images/logo-putih.png" alt=""
+                                        style="width:100%; height:auto; object-fit: cover; "> --}}
+                                    <img src="{{ url('public/web') }}/assets/images/tiga.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -56,7 +57,7 @@
                         <div class="team-member">
                             <div class="team-thumb">
                                 <div class="thumb-overlay"></div>
-                                <img src="{{ url("public/$kontak_wisata->foto") }}" alt="">
+                                <img style="width: 90%;" src="{{ url("public/$kontak_wisata->foto") }}" alt="">
                             </div>
                         </div>
                     </div>

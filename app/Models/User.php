@@ -4,13 +4,12 @@ namespace App\Models;
 
 
 use Illuminate\Support\Str;
-use App\Models\Model;
 use App\Models\ModelAuthenticate;
 
 class User extends ModelAuthenticate
 {
     protected $table = "user";
-    
+
     public static function boot()
     {
         parent::boot();
@@ -34,10 +33,10 @@ class User extends ModelAuthenticate
             $filename = time() . "-"  . $randomStr . "."  . $poto->extension();
             $url = $poto->storeAs($destination, $filename);
             $this->poto = "app/" . $url;
-            
+
 
         }
     }
 
-    
+
 }

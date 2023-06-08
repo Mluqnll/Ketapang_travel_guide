@@ -41,8 +41,8 @@ Route::prefix('admin')->middleware('auth')->group(function(){
     Route::resource('pengelola', PengelolaController::class);
 
     Route::resource('desa-wisata', DesaWisataController::class);
-
-
+    Route::PUT('desa-wisata/{desa_wisata}/update-foto', [DesaWisataController::class, 'updateFoto']);
+    Route::delete('desa-wisata/deletefoto/{desa_wisata}', [DesaWisataController::class, 'deleteFoto']);
 
     Route::resource('atraksi-wisata', AtraksiWisataController::class);
     Route::get('atraksi-wisata/show-atraksi-wisata/{atraksi_wisata}', [AtraksiWisataController::class, 'detail']);
@@ -61,26 +61,26 @@ Route::prefix('admin')->middleware('auth')->group(function(){
     Route::get('fasilitas/show-fasilitas/{fasilitas}', [FasilitasController::class, 'detail']);
 
 });
-Route::post('store-galeri', [DesaWisataController::class, 'storeGaleri']);
-Route::get('delete-galeri/{galeri}', [DesaWisataController::class, 'deleteGaleri']);
 
 Route::post('store-bulan', [KalenderWisataController::class, 'storeBulan']);
 
-
- Route::post('login', [AuthController::class, 'loginProcess']);
-Route::get('logout', [AuthController::class, 'logout'])->name('logout');
-
-
-
 Route::resource('/', WebDesaWisataController::class);
-Route::resource('desawisata', WebDesaWisataController::class);
-Route::resource('kontakwisata', WebKontakWisataController::class);
-Route::resource('kalenderwisata', WebKalenderWisataController::class);
-Route::resource('petawisata', WebPetaWisataController::class);
-Route::resource('atraksiwisata',WebAtraksiWisataController::class);
-Route::resource('fasilitaswisata', WebFasilitasController::class);
+Route::resource('desa-wisata', WebDesaWisataController::class);
+Route::resource('kontak-wisata', WebKontakWisataController::class);
+Route::resource('kalender-wisata', WebKalenderWisataController::class);
+Route::resource('peta-wisata', WebPetaWisataController::class);
+// Route::resource('atraksi-wisata',WebAtraksiWisataController::class);
+// Route::resource('fasilitas-wisata', WebFasilitasController::class);
 
-Route::get('atraksi-wisata/{kategori}',[WebAtraksiWisataController::class,'index']);
+Route::get('fasilitas/{kategori_fasilitas}',[WebFasilitasController::class,'index']);
+Route::get('fasilitas-wisata/{fasilitas}',[WebFasilitasController::class,'show']);
+
+Route::get('kalender-wisata-mobile', [WebKalenderWisataController::class,'kalender']);
+Route::get('desa-wisata-mobile', [WebDesaWisataController::class,'desa']);
+Route::get('peta-wisata-mobile',[WebPetaWisataController::class,'peta']);
+Route::get('atraksi/mobile/{kategori}',[WebAtraksiWisataController::class,'atraksi']);
+Route::get('atraksi/{kategori}',[WebAtraksiWisataController::class,'index']);
+Route::get('atraksi-wisata/{atraksi_wisata}',[WebAtraksiWisataController::class,'show']);
 
 
 Route::get('login', [AuthController::class, 'login'])->name('login');

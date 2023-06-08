@@ -1,4 +1,7 @@
 <x-web>
+
+    @include('menu.menu')
+
     <div class="remove-padding transition-none" id="home">
         <div id="rev_slider_1078_2_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
             data-alias="classic4export" data-source="gallery"
@@ -21,9 +24,10 @@
                         <!-- LAYER NR. 1 -->
                         <div class="hero-text-wrap">
                             <center>
-                                <h3 style="color: white; font-weight:10px; margin-top:45vh"></h3>
-                                <img src="{{ url('public/web') }}/assets/images/logo-putih.png" alt=""
-                                    style="width:50%; height:auto; object-fit: cover; ">
+                                <h3 style="color: white; font-weight:10px; margin-top:30vh"></h3>
+                                {{-- <img src="{{ url('public/web') }}/assets/images/logo-putih.png" alt=""
+                                    style="width:50%; height:auto; object-fit: cover; "> --}}
+                                    <img  src="{{ url('public/web') }}/assets/images/tiga.png" style="width:70%; height:auto; object-fit: cover;" alt="">
                             </center>
                         </div>
 
@@ -38,28 +42,28 @@
     <section class="white-bg" id="pricing">
         <div class="container">
             <div class="section-title wow fadeInUp text-center" data-wow-delay="0.1s">
-                <strong style="font-size: 20px; font-weight:bold; color:grey"> Di Kabupaten
+                <strong style="font-size: 20px; font-weight:bold; color:grey"> {{$kategori_fasilitas->nama}} Di Kabupaten
                     Ketapang
                 </strong>
                 <hr class="center_line grey-bg">
             </div>
             <div class="row mt-50">
-                {{-- @foreach ($list_atraksi_wisata as $atraksi_wisata)
+                @foreach ($list_fasilitas as $fasilitas)
                     <div class="col-md-4 blog-list wow fadeInLeft" data-wow-delay="0.1s">
                         <div class="post-wrap">
                             <div class="post-img">
                                 <div class="item">
                                     <img class="img-responsive" style="width:100% ; height:200px; object-fit: cover"
-                                        src="{{ url("public/$atraksi_wisata->foto") }}" alt="" />
+                                        src="{{ url("public/$fasilitas->foto") }}" alt="" />
                                 </div>
                             </div>
                             <div class="post-text">
-                                <a href="{{ url("atraksiwisata/$atraksi_wisata->id") }}">{{ $atraksi_wisata->nama }}</a>
+                                <a href="{{ url("fasilitas-wisata/$fasilitas->id") }}">{{ $fasilitas->nama }}</a>
                             </div>
                             <hr class="grey-bg">
                         </div>
                     </div>
-                @endforeach --}}
+                @endforeach
             </div>
         </div>
     </section>

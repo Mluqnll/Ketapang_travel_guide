@@ -34,9 +34,9 @@
                                 </select>
                             </div>
 
-                            <label class="col-sm-2 col-form-label text-left">Tahun Event</label>
+                            <label class="col-sm-2 col-form-label text-left">Tanggal Event</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" name="tahun" placeholder="Tahun Event">
+                                <input type="date" class="form-control" name="tanggal" placeholder="Tanggal Event">
                             </div>
                         </div>
 

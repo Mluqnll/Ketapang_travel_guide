@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class FasilitasController extends Controller
 {
-    
+
     public function index()
     {
         $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
@@ -26,7 +26,7 @@ class FasilitasController extends Controller
 
     public function store(Request $request)
     {
-        $fasilitas =New Fasilitas;
+        $fasilitas = new Fasilitas;
         $fasilitas->id_kategori_fasilitas = request('id_kategori_fasilitas');
         $fasilitas->nama = request('nama');
         $fasilitas->alamat = request('alamat');
@@ -36,14 +36,16 @@ class FasilitasController extends Controller
         $fasilitas->hari_buka = request('hari_buka');
         $fasilitas->jam_buka = request('jam_buka');
         $fasilitas->jam_tutup = request('jam_tutup');
+        $fasilitas->link = request('link');
+        $fasilitas->rating = request('rating');
         $fasilitas->lat = request('lat');
         $fasilitas->lng = request('lng');
         $fasilitas->sumber_foto = request('sumber_foto');
-        $fasilitas->handleUploadPoto();
+        $fasilitas->handleUploadFoto();
         $fasilitas->save();
 
         $id_kategori_fasilitas = request('id_kategori_fasilitas');
-        return redirect('admin/fasilitas/'.$id_kategori_fasilitas)->with('success', 'Data Berhasil Disimpan');
+        return redirect('admin/fasilitas/' . $id_kategori_fasilitas)->with('success', 'Data Berhasil Disimpan');
     }
 
     public function show($kategori)
@@ -74,14 +76,17 @@ class FasilitasController extends Controller
         $fasilitas->hari_buka = request('hari_buka');
         $fasilitas->jam_buka = request('jam_buka');
         $fasilitas->jam_tutup = request('jam_tutup');
+        $fasilitas->link = request('link');
+        $fasilitas->rating = request('rating');
+        $fasilitas->fasilitas = request('fasilitas');
         $fasilitas->lat = request('lat');
         $fasilitas->lng = request('lng');
         $fasilitas->sumber_foto = request('sumber_foto');
-        $fasilitas->handleUploadPoto();
+        if (request('foto')) $fasilitas->handleUploadFoto();
         $fasilitas->save();
 
         $id_kategori_fasilitas = request('id_kategori_fasilitas');
-        return redirect('admin/fasilitas/'.$id_kategori_fasilitas)->with('success', 'Data Berhasil Disimpan');
+        return redirect('admin/fasilitas/' . $id_kategori_fasilitas)->with('success', 'Data Berhasil Disimpan');
     }
 
     public function detail($fasilitas)
@@ -94,8 +99,9 @@ class FasilitasController extends Controller
 
     public function destroy($fasilitas)
     {
-        Fasilitas::destroy($fasilitas);
-
+        $fasilitas = Fasilitas::find($fasilitas);
+        $fasilitas->handleDelete();
+        $fasilitas->delete();
         return back()->with('danger', 'Data Berhasil Dihapus');
     }
 }

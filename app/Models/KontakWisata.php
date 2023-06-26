@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\Model;
 use Illuminate\Support\Str;
 
@@ -11,6 +10,7 @@ class KontakWisata extends Model
     protected $table="kontak_wisata";
     function handleUploadFoto()
     {
+        $this->handleDelete();
         if (request()->hasFile('foto')) {
             $foto = request()->file('foto');
             $destination = "Kontak";
@@ -20,6 +20,18 @@ class KontakWisata extends Model
             $this->foto = "app/" . $url;
             $this->save();
 
+        }
+    }
+
+    function handleDelete()
+    {
+        $foto = $this->foto;
+        if ($foto) {
+            $path = public_path($foto);
+            if (file_exists($path)) {
+                unlink($path);
+            }
+            return true;
         }
     }
 }

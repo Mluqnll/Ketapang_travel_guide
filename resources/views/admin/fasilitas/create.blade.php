@@ -14,7 +14,7 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left">Kategori Fasilitas</label>
                             <div class="col-sm-4">
-                                
+
                                 <input type="text" value="{{ $kategori_fasilitas->nama }}" class="form-control" readonly>
                                 <input type="text" name="id_kategori_fasilitas" value="{{ $kategori_fasilitas->id }}" class="form-control" hidden>
                             </div>
@@ -31,7 +31,7 @@
                                 <input type="text" class="form-control" name="alamat"
                                     placeholder="Alamat Wisata">
                             </div>
-                            <label class="col-sm-2 col-form-label text-left"> Nama Pengelola</label>
+                            <label class="col-sm-2 col-form-label text-left"> Pengelola</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="nama_pengelola"
                                     placeholder="Nama Pengelola">
@@ -50,7 +50,7 @@
                         </div>
 
                         <div class="form-group row">
-                           
+
                             <label class="col-sm-2 col-form-label text-left"> Jam Buka</label>
                             <div class="col-sm-4">
                                 <input type="time" class="form-control" name="jam_buka"placeholder="Jam Buka">
@@ -58,6 +58,18 @@
                             <label class="col-sm-2 col-form-label text-left"> Jam Tutup</label>
                             <div class="col-sm-4">
                                 <input type="time" class="form-control" name="jam_tutup" placeholder="Jam Tutup">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+
+                            <label class="col-sm-2 col-form-label text-left"> Link</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="link"placeholder="Link">
+                            </div>
+                            <label class="col-sm-2 col-form-label text-left"> Rating</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="rating" placeholder="Rating">
                             </div>
                         </div>
 
@@ -82,7 +94,16 @@
                                 <input type="text" class="form-control" name="lng" placeholder="Titik Longitude">
                             </div>
                         </div>
-                        
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left">Fasilitas</label>
+                            <div class="col-sm-10">
+                                <div class="tinymce-wrap">
+                                    <textarea class="form-control mt-15" rows="3" name="fasilitas"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left">Deskripsi</label>
                             <div class="col-sm-10">
@@ -92,7 +113,7 @@
                             </div>
                         </div>
 
-                        
+
                         <div class="form-group row mb-0">
                             <div class="col-sm-12">
                                 <button class="btn btn-primary float-right"><span class="fa fa-save"></span>

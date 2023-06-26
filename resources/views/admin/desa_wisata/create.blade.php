@@ -51,8 +51,14 @@
 
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left"> Poto</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-3">
                                 <input type="file" class="form-control" name="foto" accept=".jpg, .png, .jpeg">
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="file" class="form-control" name="foto1" accept=".jpg, .png, .jpeg">
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="file" class="form-control" name="foto2" accept=".jpg, .png, .jpeg">
                             </div>
                         </div>
 

@@ -15,7 +15,7 @@ class KalenderwisataResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'Bulan' => $this->id_bulan,
+            'Bulan' =>$this->id_bulan,
             'Nama' => $this->nama,
             'Deskripsi' => $this->deskripsi,
             'Tempat' => $this->tempat,

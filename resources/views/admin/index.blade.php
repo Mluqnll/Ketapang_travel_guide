@@ -83,7 +83,7 @@
                         </div>
                         <div class="col-auto align-self-center">
                             <div class="report-main-icon bg-light-alt">
-                                <i data-feather="home" class="align-self-center text-muted icon-md"></i>
+                                <i data-feather="list" class="align-self-center text-muted icon-md"></i>
                             </div>
                         </div>
                     </div>

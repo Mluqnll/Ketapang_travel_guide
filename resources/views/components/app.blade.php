@@ -27,6 +27,13 @@
         <link href="{{ url('public/admin') }}/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
         <link href="{{ url('public/admin') }}/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
+        <link href="{{ url('public/admin') }}/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{ url('public/admin') }}/assets/css/jquery-ui.min.css" rel="stylesheet">
+        <link href="{{ url('public/admin') }}/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{ url('public/admin') }}/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{ url('public/admin') }}/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+        <link href="{{ url('public/admin') }}/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
     </head>
 
     <body class="dark-sidenav">
@@ -98,6 +105,23 @@
         <script src="{{ url('public/admin') }}/plugins/leaflet/leaflet.js"></script>
         <script src="{{ url('public/admin') }}/plugins/lightpick/lightpick.js"></script>
         <script src="{{ url('public/admin') }}/assets/pages/jquery.profile.init.js"></script>
+
+        <script src="{{ url('public/admin') }}/assets/js/jquery.min.js"></script>
+        <script src="{{ url('public/admin') }}/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="{{ url('public/admin') }}/assets/js/metismenu.min.js"></script>
+        <script src="{{ url('public/admin') }}/assets/js/waves.js"></script>
+        <script src="{{ url('public/admin') }}/assets/js/feather.min.js"></script>
+        <script src="{{ url('public/admin') }}/assets/js/simplebar.min.js"></script>
+        <script src="{{ url('public/admin') }}/assets/js/jquery-ui.min.js"></script>
+        <script src="{{ url('public/admin') }}/assets/js/moment.js"></script>
+        <script src="{{ url('public/admin') }}/plugins/daterangepicker/daterangepicker.js"></script>
+
+        <!--Wysiwig js-->
+        <script src="{{ url('public/admin') }}/plugins/tinymce/tinymce.min.js"></script>
+        <script src="{{ url('public/admin') }}/assets/pages/jquery.form-editor.init.js"></script>
+
+        <!-- App js -->
+        <script src="{{ url('public/admin') }}/assets/js/app.js"></script>
 
 
     </body>

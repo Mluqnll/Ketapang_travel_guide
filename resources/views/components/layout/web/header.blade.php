@@ -1,3 +1,15 @@
+<!-- ======= Header ======= -->
+@php
+    function checkRouteActive($route)
+    {
+        if (Route::current()->uri == $route) {
+            return 'active';
+        }
+    }
+@endphp
+
+
+
 <nav class="navbar navbar-default navbar-fixed navbar-transparent white bootsnav on no-full no-border corporate">
 
     <div class="fullscreen-search-overlay" id="search-overlay"> <a href="#" class="fullscreen-close"
@@ -30,21 +42,21 @@
 
         <div class="collapse navbar-collapse" id="navbar-menu">
             <ul class="nav navbar-nav" data-in="fadeIn" data-out="fadeOut">
-                <li><a class="page-scroll" href="{{ url('desa-wisata') }}">Desa Wisata</a></li>
+                <li><a class="page-scroll" href="{{ url('desa-wisata') }}"class="nav-link {{ checkRouteActive('desa-wisata') }}" >Desa Wisata</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle page-scroll" data-toggle="dropdown">
                         Atraksi Wisata
                     </a>
                     @yield('menu')
                 </li>
-                <li><a class="page-scroll" href="{{ url('kalender-wisata') }}">Kalender</a></li>
-                <li><a class="page-scroll" href="{{ url('peta-wisata') }}">Peta Wisata</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle page-scroll" data-toggle="dropdown">
-                        Fasilitas
+                        Amenitas
                     </a>
                     @yield('fasilitas')
                 </li>
+                <li><a class="page-scroll" href="{{ url('kalender-wisata') }}">Kalender</a></li>
+                <li><a class="page-scroll" href="{{ url('peta-wisata') }}">Peta Wisata</a></li>
                 <li><a class="page-scroll" href="{{ url('kontak-wisata') }}">Info & Kontak</a></li>
             </ul>
         </div>

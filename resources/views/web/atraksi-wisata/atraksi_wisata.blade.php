@@ -26,7 +26,8 @@
                                 <h3 style="color: white; font-weight:10px; margin-top:30vh"></h3>
                                 {{-- <img src="{{ url('public/web') }}/assets/images/logo-putih.png" alt=""
                                     style="width:50%; height:auto; object-fit: cover; "> --}}
-                                    <img  src="{{ url('public/web') }}/assets/images/tiga.png" style="width:70%; height:auto; object-fit: cover;" alt="">
+                                <img src="{{ url('public/web') }}/assets/images/tiga.png"
+                                    style="width:70%; height:auto; object-fit: cover;" alt="">
                             </center>
                         </div>
 
@@ -57,7 +58,8 @@
                                 </div>
                             </div>
                             <div class="post-text">
-                                <a href="{{ url("atraksi-wisata/$atraksi_wisata->id") }}">{{ $atraksi_wisata->nama }}</a>
+                                <a href=""data-toggle="modal"
+                                    data-target="#exampleModalLarge01{{ $atraksi_wisata->id }}">{{ $atraksi_wisata->nama }}</a>
                             </div>
                             <hr class="grey-bg">
                         </div>
@@ -66,5 +68,55 @@
             </div>
         </div>
     </section>
-
 </x-web>
+
+@foreach ($list_atraksi_wisata as $atraksi_wisata)
+    <div class="modal fade" id="exampleModalLarge01{{ $atraksi_wisata->id }}" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLarge01{{ $atraksi_wisata->id }}" aria-hidden="true">
+        <div class="modal-dialog modal-lg " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="img-responsive" src="{{ url("public/$atraksi_wisata->foto") }}"
+                        style="width: 100%; height: 50%; object-fit: cover" alt="" />
+                    <p class="text-right">Sumber Foto :
+                        <em>{{ $atraksi_wisata->sumber_foto }}</em>
+                    </p>
+                </div>
+                <div class="modal-body">
+                    <div class="sidebar_widget widget_archive ">
+                        <h5 class="aside-title">Informasi</h5>
+                        <ul>
+                            <li><a style="color: black">Alamat</a> :
+                            </li>
+                            <span>{{ $atraksi_wisata->alamat }}</span>
+                            <li>
+                            </li>
+                            <li><a style="color: black">Aktivitas</a> :
+                                <span>{{ $atraksi_wisata->atraksi }}</span>
+                            </li>
+                            <li><a style="color: black">Pengelola</a> :
+                                <span>{{ $atraksi_wisata->nama_pengelola }}</span>
+                            </li>
+                            <li><a style="color: black">Nara Hubung</a> :
+                                <span>{{ $atraksi_wisata->no_pengelola }}</span>
+                            </li>
+                            <li><a style="color: black">Hari Buka</a> :
+                                <span>{{ $atraksi_wisata->hari_buka }}</span>
+                            </li>
+                            <li><a style="color: black">Jam Buka</a> : <span>{!! date('H:i', strtotime($atraksi_wisata->jam_buka)) !!} -
+                                    {!! date('H:i', strtotime($atraksi_wisata->jam_tutup)) !!}</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 style="font-weight: 600;">{{ $atraksi_wisata->nama }}</h3>
+                <div class="post-text text-left">
+                    <p style="text-align: justify">
+                        {{ $atraksi_wisata->deskripsi }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+@endforeach

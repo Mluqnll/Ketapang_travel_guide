@@ -9,28 +9,28 @@ use App\Models\Bulan;
 
 class KalenderWisataController extends Controller
 {
-    
+
     public function index()
     {
         $data['list_kalender_wisata'] = KalenderWisata::all();
         return view('admin.kalender_wisata.index', $data);
     }
 
-   
+
     public function create()
     {
         $data['list_bulan'] = Bulan::all();
         return view('admin.kalender_wisata.create', $data);
     }
 
-    
+
     public function store(Request $request)
     {
         $kalender_wisata = New KalenderWisata;
         $kalender_wisata->nama = request('nama');
         $kalender_wisata->deskripsi = request('deskripsi');
         $kalender_wisata->tempat = request('tempat');
-        $kalender_wisata->tahun = request('tahun');
+        $kalender_wisata->tanggal = request('tanggal');
         $kalender_wisata->id_bulan = request('id_bulan');
         $kalender_wisata->sumber_foto = request('sumber_foto');
         $kalender_wisata->handleUploadFoto();
@@ -55,7 +55,7 @@ class KalenderWisataController extends Controller
         return view('admin.kalender_wisata.show', $data);
     }
 
-    
+
     public function edit($kalender_wisata)
     {
         $data['kalender_wisata'] = KalenderWisata::find($kalender_wisata);
@@ -63,26 +63,28 @@ class KalenderWisataController extends Controller
         return view('admin.kalender_wisata.edit', $data);
     }
 
-    
+
     public function update($kalender_wisata)
     {
         $kalender_wisata = KalenderWisata::find($kalender_wisata);
         $kalender_wisata->nama = request('nama');
         $kalender_wisata->deskripsi = request('deskripsi');
         $kalender_wisata->tempat = request('tempat');
-        $kalender_wisata->tahun = request('tahun');
+        $kalender_wisata->tanggal = request('tanggal');
         $kalender_wisata->id_bulan = request('id_bulan');
         $kalender_wisata->sumber_foto = request('sumber_foto');
-        $kalender_wisata->handleUploadFoto();
+        if (request('foto')) $kalender_wisata->handleUploadFoto();
         $kalender_wisata->save();
 
         return redirect('admin/kalender-wisata')->with('primary', 'Data Berhasil Diedit');
     }
 
-   
+
     public function destroy($kalender_wisata)
     {
-        KalenderWisata::destroy($kalender_wisata);
+        $kalender_wisata = KalenderWisata::find($kalender_wisata);
+        $kalender_wisata->handleDelete();
+        $kalender_wisata->delete();
 
         return back()->with('danger', 'Data Berhasil Dihapus');
     }

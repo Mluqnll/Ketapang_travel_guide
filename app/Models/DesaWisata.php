@@ -10,13 +10,9 @@ class DesaWisata extends Model
 {
     protected $table="desa_wisata";
 
-    public function Galeri()
-    {
-        return $this->belongsTo(Galeri::class, 'id');
-    }
-
     function handleUploadFoto()
     {
+        $this->handleDelete();
         if (request()->hasFile('foto')) {
             $foto = request()->file('foto');
             $destination = "Desa-Wisata";
@@ -29,6 +25,7 @@ class DesaWisata extends Model
     }
     function handleUploadFoto1()
     {
+        $this->handleDelete1();
         if (request()->hasFile('foto1')) {
             $foto1 = request()->file('foto1');
             $destination = "Desa-Wisata";
@@ -41,6 +38,7 @@ class DesaWisata extends Model
     }
     function handleUploadFoto2()
     {
+        $this->handleDelete2();
         if (request()->hasFile('foto2')) {
             $foto2 = request()->file('foto2');
             $destination = "Desa-Wisata";
@@ -51,16 +49,39 @@ class DesaWisata extends Model
 
         }
     }
-    function handleUploadFoto3()
+    function handleDelete()
     {
-        if (request()->hasFile('foto3')) {
-            $foto3 = request()->file('foto3');
-            $destination = "Desa-Wisata";
-            $randomStr = Str::random(5);
-            $filename = time() . "-"  . $randomStr . "."  . $foto3->extension();
-            $url = $foto3->storeAs($destination, $filename);
-            $this->foto3 = "app/" . $url;
+        $foto = $this->foto;
+        if ($foto) {
+            $path = public_path($foto);
+            if (file_exists($path)) {
+                unlink($path);
+            }
+            return true;
+        }
+    }
 
+    function handleDelete1()
+    {
+        $foto1 = $this->foto1;
+        if ($foto1) {
+            $path = public_path($foto1);
+            if (file_exists($path)) {
+                unlink($path);
+            }
+            return true;
+        }
+    }
+
+    function handleDelete2()
+    {
+        $foto2 = $this->foto2;
+        if ($foto2) {
+            $path = public_path($foto2);
+            if (file_exists($path)) {
+                unlink($path);
+            }
+            return true;
         }
     }
 }

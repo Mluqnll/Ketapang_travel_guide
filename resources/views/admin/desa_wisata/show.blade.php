@@ -4,10 +4,6 @@
             <div class="card">
                 <div class="card-header">
                     <x-layout.button.back-button url="admin/desa-wisata" />
-                    <button type="button" class="btn btn-primary float-right mb-10" data-toggle="modal"
-                        data-target="#modaltambah">
-                        <span class="fa fa-plus"></span> Tambah Foto
-                    </button>
                 </div>
                 @csrf
                 <div class="card-body">
@@ -55,50 +51,4 @@
 
     </div>
 
-
-    <div class="row justify-content">
-        <div class="modal fade" id="modaltambah" tabindex="-1" role="dialog" aria-labelledby="modaltambah"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Tambah Desa Wisata</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <form action="{{ url('admin/desa-wisata', $desa_wisata->id) }}/update-foto" method="POST"
-                        enctype="multipart/form-data">
-                        @csrf
-                        @method('PUT')
-                        <div class="modal-body">
-
-                            <div class="form-group row">
-                                <label class="col-sm-4 col-form-label text-left">Foto1</label>
-                                <div class="col-sm-8">
-                                    <input type="file" class="form-control" name="foto1"
-                                        accept=".jpg, .png, .jpeg">
-                                </div>
-                                <label class="col-sm-4 col-form-label text-left">Foto2</label>
-                                <div class="col-sm-8">
-                                    <input type="file" class="form-control" name="foto2"
-                                        accept=".jpg, .png, .jpeg">
-                                </div>
-                                <label class="col-sm-4 col-form-label text-left">Foto3</label>
-                                <div class="col-sm-8">
-                                    <input type="file" class="form-control" name="foto3"
-                                        accept=".jpg, .png, .jpeg">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" data-dismiss="modal"><span class="fa fa-times"></span>
-                                Close</button>
-                            <button class="btn btn-primary"><span class="fa fa-save"></span> Simpan</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 </x-app>

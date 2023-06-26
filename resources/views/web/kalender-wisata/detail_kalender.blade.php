@@ -26,7 +26,7 @@
                                     <div class="post-wrap">
                                         <div class="post-img">
                                             <div class="date-box dark-bg">
-                                                <span class="day">{{ $kalender_wisata->tahun }}</span>
+                                                <span class="day">{{ $kalender_wisata->tanggal }}</span>
                                             </div>
                                             <div class="item"><img class="img-responsive"
                                                     style="width:100%; height:100%; object-fit: cover"

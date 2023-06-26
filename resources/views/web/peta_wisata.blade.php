@@ -12,7 +12,7 @@
                                 <div class="all-padding-50 text-center">
                                     {{-- <img src="{{ url('public/web') }}/assets/images/logo-putih.png" alt=""
                                         style="width:100%; height:auto; object-fit: cover; "> --}}
-                                        <img  src="{{ url('public/web') }}/assets/images/tiga.png" alt="">
+                                    <img src="{{ url('public/web') }}/assets/images/tiga.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -71,12 +71,12 @@
             const greenIcon = new LeafIcon({
                 iconUrl: 'https://jadesta.kemenparekraf.go.id/images/merah.png'
             })
-            const redIcon = new LeafIcon({
-                iconUrl: 'https://jadesta.kemenparekraf.go.id/images/desa.png'
-            })
             const orangeIcon = new LeafIcon({
                 iconUrl: 'https://jadesta.kemenparekraf.go.id/images/kota.png'
             });
+            const redIcon = new LeafIcon({
+                iconUrl: 'https://jadesta.kemenparekraf.go.id/images/desa.png'
+            })
 
 
             const grayscaled_map = L.tileLayer(
@@ -172,19 +172,20 @@
                 }).addTo(map).bindPopup(generatePopup(data))
             @endforeach
 
-            @foreach ($list_fasilitas_wisata as $wisata)
+            @foreach ($list_fasilitas as $wisata)
                 data = {
-                    nama: `{{ $wisata->nama_fasilitas_wisata }}`,
-                    foto: `{{ url("public/$wisata->foto") }}`,
-                    deskripsi: `{{ $wisata->deskripsi }}`,
-                    link_jadesta: `{{ $wisata->link_jadesta }}`,
-                    dest_lat: `{{ $wisata->lat }}`,
-                    dest_long: `{{ $wisata->lng }}`,
+                    nama: '{{ $wisata->nama_fasilitas }}',
+                    foto: '{{ url("public/$wisata->foto") }}',
+                    deskripsi: '{{ $wisata->deskripsi }}',
+                    link_jadesta: '{{ $wisata->link_jadesta }}',
+                    dest_lat: '{{ $wisata->lat }}',
+                    dest_long: '{{ $wisata->lng }}',
                 }
                 L.marker([data.dest_lat, data.dest_long], {
                     icon: redIcon
                 }).addTo(map).bindPopup(generatePopup(data))
             @endforeach
+
 
             L.control.locate().addTo(map);
         </script>

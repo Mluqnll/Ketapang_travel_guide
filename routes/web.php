@@ -41,8 +41,6 @@ Route::prefix('admin')->middleware('auth')->group(function(){
     Route::resource('pengelola', PengelolaController::class);
 
     Route::resource('desa-wisata', DesaWisataController::class);
-    Route::PUT('desa-wisata/{desa_wisata}/update-foto', [DesaWisataController::class, 'updateFoto']);
-    Route::delete('desa-wisata/deletefoto/{desa_wisata}', [DesaWisataController::class, 'deleteFoto']);
 
     Route::resource('atraksi-wisata', AtraksiWisataController::class);
     Route::get('atraksi-wisata/show-atraksi-wisata/{atraksi_wisata}', [AtraksiWisataController::class, 'detail']);

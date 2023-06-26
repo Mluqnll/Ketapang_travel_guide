@@ -26,4 +26,5 @@ Route::get('desawisata/all', [DesawisataApiController::class,'getAllData']);
 Route::get('wisataalam/all', [AtraksiwisataApiController::class,'WisataAlam']);
 Route::get('wisatabudaya/all', [AtraksiwisataApiController::class,'WisataBudaya']);
 Route::get('wisatabuatan/all', [AtraksiwisataApiController::class,'WisataBuatan']);
-Route::get('januari/all', [KalenderwisataApiController::class,'Januari']);
+Route::get('januari/all', [KalenderwisataApiController::class,'get']);
+Route::get('kalender/all', [KalenderwisataApiController::class,'getAllData']);

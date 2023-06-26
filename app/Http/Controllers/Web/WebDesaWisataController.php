@@ -18,7 +18,6 @@ class WebDesaWisataController extends Controller
         $data['list_kategori'] = Kategori::all();
         $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
         $data['list_desa_wisata'] = DesaWisata::all();
-        $data['list_galeri'] = Galeri::all();
         $data['detail'] = Detail::all();
         $data['list_desa_wisata'] = DesaWisata::paginate(6);
         return view('web.desa_wisata', $data);
@@ -26,7 +25,6 @@ class WebDesaWisataController extends Controller
 
     public function desa()
     {
-        $data['list_galeri'] = Galeri::all();
         $data['list_desa_wisata'] = DesaWisata::all();
         $data['detail'] = Detail::all();
         $data['list_desa_wisata'] = DesaWisata::paginate(6);

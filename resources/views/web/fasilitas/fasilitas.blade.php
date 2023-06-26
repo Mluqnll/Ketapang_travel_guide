@@ -55,10 +55,14 @@
                                 <div class="item">
                                     <img class="img-responsive" style="width:100% ; height:200px; object-fit: cover"
                                         src="{{ url("public/$fasilitas->foto") }}" alt="" />
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="post-text">
+                                    <a href="{{ url("fasilitas-wisata/$fasilitas->id") }}">{{ $fasilitas->nama }}</a>
+                                    <p style="color: #f9d402;">{{$fasilitas->rating}}</p>
+                                </div>
                             <div class="post-text">
-                                <a href="{{ url("fasilitas-wisata/$fasilitas->id") }}">{{ $fasilitas->nama }}</a>
+                                <p>{{$fasilitas->alamat}}</p>
                             </div>
                             <hr class="grey-bg">
                         </div>

@@ -35,9 +35,9 @@
                                 </select>
                             </div>
 
-                            <label class="col-sm-2 col-form-label text-left">Tahun Event</label>
+                            <label class="col-sm-2 col-form-label text-left">Tanggal Event</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" name="tahun" value="{{ $kalender_wisata->tahun }}">
+                                <input type="date" class="form-control" name="tanggal" value="{{ $kalender_wisata->yanggal }}">
                             </div>
                         </div>
 

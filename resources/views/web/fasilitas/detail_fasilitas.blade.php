@@ -15,52 +15,46 @@
             </div>
     </section>
 
+
     <section class="white-bg">
         <div class="container">
             <div class="row">
-                <div class="col-md-9 col-sm-8 col-xs-12 xs-mb-50">
+                <div class="col-md-8 col-sm-8 col-xs-12 xs-mb-50">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <ul class="single-blog-list">
                                 <li>
                                     <div class="post-wrap">
                                         <div class="post-img">
-                                            <h3 style="font-weight: 600;">{{ $fasilitas->nama }}</h3>
-                                            <div class="item"><img class="img-responsive"
-                                                    src="{{ url("public/$fasilitas->foto") }}"
-                                                    style="width: 100%; height: 50%; object-fit: cover"
-                                                    alt="" /></div>
+
+                                            <img class="img-responsive" src="{{ url("public/$fasilitas->foto") }}"
+                                                alt="" />
                                         </div>
                                         <p class="text-right">Sumber Foto :
                                             <em>{{ $fasilitas->sumber_foto }}</em>
                                         </p>
-                                        <div class="post-text text-left">
 
-                                            <p>
-                                                {!! nl2br($fasilitas->deskripsi) !!}
-                                            </p>
-                                        </div>
                                     </div>
                                 </li>
                             </ul>
                         </div>
-                        <!--== Post End ==-->
                     </div>
                 </div>
-
-                <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="sidebar_widget widget_archive ">
                         <h5 class="aside-title">Informasi</h5>
+                        <a class="btn btn-md btn-dark-outline btn-square mt-10" href="{{ url("$fasilitas->link") }}">Pemesanan tempat</a><br>
+
                         <ul>
                             <li><a style="color: black">Alamat</a> :
                             </li>
                             <span>{{ $fasilitas->alamat }}</span>
                             <li>
                             </li>
-                            <li><a style="color: black">Nama Pengelola</a> :
+                            <li><a style="color: black">Pengelola</a> :
                                 <span>{{ $fasilitas->nama_pengelola }}</span>
                             </li>
-                            <li><a style="color: black">Nomor Pengelola</a> :
+                            <li><a style="color: black">Nara Hubung</a> :
                                 <span>{{ $fasilitas->no_pengelola }}</span>
                             </li>
                             <li><a style="color: black">Hari Buka</a> :
@@ -68,27 +62,29 @@
                             </li>
                             <li><a style="color: black">Jam Buka</a> : <span>{!! date('H:i', strtotime($fasilitas->jam_buka)) !!} -
                                     {!! date('H:i', strtotime($fasilitas->jam_tutup)) !!}</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="sidebar_widget widget_recent_post mb-50 col-md-3 col-sm-3 col-xs-12">
-                    <h5 class="aside-title">Atraksi Wisata Terkait</h5>
 
-                    <div class="post-item">
-                        <div class="post-thumb">
-                            <a href="{{ url("fasilitas/$fasilitas->id") }}"><img width="75" height="75"
-                                    src="{{ url("public/$fasilitas->foto") }}" style="object-fit:cover"
-                                    class="img-responsive" alt="post-01" /></a>
-                        </div>
-                        <div class="post-body">
-                            <span class="font-18px"><a
-                                    href="{{ url("fasilitas-wisata/$fasilitas->id") }}">{{ $fasilitas->nama }}</a></span>
-                            <div class="post-time">{{ $fasilitas->created_at->diffForHumans() }}</div>
-                            <a href="#" class="subtitle">{{ $fasilitas->nama }}</a>
+                        </ul>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h5 class="aside-title">fasiilitas</h5>
+                                <ul>
+                                    <li>
+                                        <span>{!! nl2br($fasilitas->fasilitas) !!}</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <h3 style="font-weight: 600;">{{ $fasilitas->nama }}</h3>
+            <div class="post-text text-left">
+                <p style="text-align: justify">
+                    {{ $fasilitas->deskripsi }}
+                </p>
+            </div>
         </div>
     </section>
+
+
 </x-web>

@@ -30,6 +30,8 @@ class DesaWisataController extends Controller
         $desa_wisata->lat = request('lat');
         $desa_wisata->lng = request('lng');
         $desa_wisata->handleUploadFoto();
+        $desa_wisata->handleUploadFoto1();
+        $desa_wisata->handleUploadFoto2();
         $desa_wisata->save();
 
         return redirect('admin/desa-wisata')->with('success', 'Data Berhasil Ditambahkan');
@@ -38,7 +40,6 @@ class DesaWisataController extends Controller
     public function show($desa_wisata)
     {
         $data['desa_wisata'] = DesaWisata::find($desa_wisata);
-        $data['list_galeri'] = Galeri::all();
         return view('admin.desa_wisata.show', $data);
     }
 
@@ -59,33 +60,19 @@ class DesaWisataController extends Controller
         $desa_wisata->link_jadesta = request('link_jadesta');
         $desa_wisata->lat = request('lat');
         $desa_wisata->lng = request('lng');
-        $desa_wisata->handleUploadFoto();
+        if (request('foto')) $desa_wisata->handleUploadFoto();
+        if (request('foto1')) $desa_wisata->handleUploadFoto1();
+        if (request('foto2')) $desa_wisata->handleUploadFoto2();
         $desa_wisata->save();
 
         return redirect('admin/desa-wisata')->with('success', 'Data Berhasil Di Edit');
     }
 
-    public function updateFoto($desa_wisata)
-    {
-        $desa_wisata = DesaWisata::find($desa_wisata);
-        $desa_wisata->handleUploadFoto1();
-        $desa_wisata->handleUploadFoto2();
-        $desa_wisata->handleUploadFoto3();
-        $desa_wisata->save();
-
-        return back()->with('success', 'Data Berhasil Di Tambah');
-    }
-
     public function destroy($desa_wisata)
     {
-        DesaWisata::destroy($desa_wisata);
-
+        $desa_wisata = DesaWisata::find($desa_wisata);
+        $desa_wisata->handleDelete();
+        $desa_wisata->delete();
         return back()->with('danger', 'Data Berhasil Dihapus');
-    }
-
-    public function deleteFoto($desa_wisata)
-    {
-        DesaWisata::destroy($desa_wisata);
-        return back()->with('danger', 'Data Foto Berhasil Dihapus');
     }
 }

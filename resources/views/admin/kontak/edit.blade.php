@@ -34,7 +34,7 @@
                                 <input type="text" class="form-control" name="link_wa" value="{{ $kontak_wisata->link_wa }}">
                             </div>
 
-             
+
 
                         </div>
 
@@ -56,7 +56,7 @@
                         </div>
 
 
-                           
+
                         </div>
 
 
@@ -66,7 +66,6 @@
 
                                 <img src="{{ url("public/$kontak_wisata->foto") }}" class="rounded" style="object-fit: cover; position: static; width: 100%; height: 200px;">
 
-                                <img src="{{ url("public/$kontak_wisata->foto") }}" class="rounded" style="object-fit: cover; position: static; width: 100%; height: 200px;">    
 
                             </div>
                             <div class="col-sm-4">
@@ -78,10 +77,10 @@
 
 
 
-                            
+
                         </div>
 
-                       
+
 
 
                         <div class="form-group row mb-0">

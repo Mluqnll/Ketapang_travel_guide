@@ -10,7 +10,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 centerize-col">
-                                <div class="all-padding-50 text-center" >
+                                <div class="all-padding-50 text-center">
                                     <img src="{{ url('public/web') }}/assets/images/tiga.png" alt="">
                                 </div>
                             </div>
@@ -56,20 +56,33 @@
                             <div class="post-wrap">
                                 <div class="post-img">
                                     <div class="blog-grid-slider slick">
-                                        @foreach ($list_galeri as $galeri)
-                                            @if ($galeri->id_desa_wisata == $desa_wisata->id)
-                                                <div class="item">
-
-                                                    <a class="image-popup-no-margins"
-                                                        href="{{ url("public/$desa_wisata->foto") }}">
-                                                        <img class="img-responsive"
-                                                            style="width:100% ; height:300px; object-fit: cover"
-                                                            src="{{ url("public/$galeri->foto") }}"
-                                                            alt="Tidak Dapat Memuat Gambar" />
-                                                    </a>
-                                                </div>
-                                            @endif
-                                        @endforeach
+                                        <div class="item">
+                                            <a class="image-popup-no-margins"
+                                                href="{{ url("public/$desa_wisata->foto") }}">
+                                                <img class="img-responsive"
+                                                    style="width:100% ; height:300px; object-fit: cover"
+                                                    src="{{ url("public/$desa_wisata->foto") }}"
+                                                    alt="Tidak Dapat Memuat Gambar" />
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a class="image-popup-no-margins"
+                                                href="{{ url("public/$desa_wisata->foto1") }}">
+                                                <img class="img-responsive"
+                                                    style="width:100% ; height:300px; object-fit: cover"
+                                                    src="{{ url("public/$desa_wisata->foto1") }}"
+                                                    alt="Tidak Dapat Memuat Gambar" />
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a class="image-popup-no-margins"
+                                                href="{{ url("public/$desa_wisata->foto2") }}">
+                                                <img class="img-responsive"
+                                                    style="width:100% ; height:300px; object-fit: cover"
+                                                    src="{{ url("public/$desa_wisata->foto2") }}"
+                                                    alt="Tidak Dapat Memuat Gambar" />
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="post-text">
                                         <h3><a

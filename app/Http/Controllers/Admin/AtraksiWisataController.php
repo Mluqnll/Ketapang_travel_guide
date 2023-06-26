@@ -38,7 +38,7 @@ class AtraksiWisataController extends Controller
         $atraksi_wisata->lat = request('lat');
         $atraksi_wisata->lng = request('lng');
         $atraksi_wisata->sumber_foto = request('sumber_foto');
-        $atraksi_wisata->handleUploadPoto();
+        $atraksi_wisata->handleUploadFoto();
         $atraksi_wisata->save();
 
         return redirect('admin/atraksi-wisata')->with('success', 'Data Berhasil Disimpan');
@@ -76,7 +76,7 @@ class AtraksiWisataController extends Controller
         $atraksi_wisata->lat = request('lat');
         $atraksi_wisata->lng = request('lng');
         $atraksi_wisata->sumber_foto = request('sumber_foto');
-        $atraksi_wisata->handleUploadPoto();
+        if (request('foto')) $atraksi_wisata->handleUploadFoto();
         $atraksi_wisata->save();
 
         $id_kategori = request('id_kategori');
@@ -93,7 +93,9 @@ class AtraksiWisataController extends Controller
 
     public function destroy($atraksi_wisata)
     {
-        AtraksiWisata::destroy($atraksi_wisata);
+        $atraksi_wisata = AtraksiWisata::find($atraksi_wisata);
+        $atraksi_wisata->handleDelete();
+        $atraksi_wisata->delete();
 
         return back()->with('danger', 'Data Berhasil Dihapus');
     }

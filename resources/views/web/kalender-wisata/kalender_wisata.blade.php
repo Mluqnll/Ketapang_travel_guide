@@ -27,7 +27,8 @@
                                 <h3 style="color: white; font-weight:10px; margin-top:30vh"></h3>
                                 {{-- <img src="{{ url('public/web') }}/assets/images/logo-putih.png" alt=""
                                     style="width:50%; height:auto; object-fit: cover; "> --}}
-                                    <img  src="{{ url('public/web') }}/assets/images/tiga.png" style="width:70%; height:auto; object-fit: cover; alt=">
+                                <img src="{{ url('public/web') }}/assets/images/tiga.png"
+                                    style="width:70%; height:auto; object-fit: cover; alt=">
                             </center>
                         </div>
 
@@ -45,21 +46,22 @@
                 @foreach ($list_bulan as $bulan)
                     <div class="col-md-4 pricing-table col-sm-4 mt-50">
                         <div class="date-box dark-bg text-center">
-                            <h1><span style="color: white; text-transform: uppercase;">
-                                    {{ $bulan->nama }}</span> </h1>
+                            <h2><span style="color: white; text-transform: uppercase;">
+                                    {{ $bulan->nama }}</span> </h2>
                         </div>
 
                         <div class="pricing-box pricing-box-bg  wow fadeInLeft" data-wow-delay="0.1s">
                             <div class="select-menu">
                                 <li class="option">
                                     @foreach ($list_kalender_wisata as $kalender_wisata)
-                                    @if ($kalender_wisata->id_bulan == $bulan->id)
-                                    <a href="{{url("kalender-wisata/$kalender_wisata->id")}}">
-                                        <h6 style="font-size: 14px; text-transform: capitalize;">
-                                            {{ $kalender_wisata->nama }} <span style="color: rgb(136, 136, 136)"></span>
-                                        </h6>
-                                    </a>
-                                    @endif
+                                        @if ($kalender_wisata->id_bulan == $bulan->id)
+                                            <a href="{{ url("kalender-wisata/$kalender_wisata->id") }}">
+                                                <h6 style="font-size: 14px; text-transform: capitalize;">
+                                                    {{ $kalender_wisata->nama }} <span
+                                                        style="color: rgb(179, 30, 30)"></span>
+                                                </h6>
+                                            </a>
+                                        @endif
                                     @endforeach
                                 </li>
                             </div>

@@ -59,7 +59,7 @@ class KontakController extends Controller
         $kontak_wisata->link_wa = request('link_wa');
         $kontak_wisata->link_fb = request('link_fb');
         $kontak_wisata->link_ig = request('link_ig');
-        $kontak_wisata->handleUploadFoto();
+        if (request('foto')) $kontak_wisata->handleUploadFoto();
         $kontak_wisata->save();
 
         return redirect('admin/kontak')->with('primary', 'Data Berhasil Disimpan');
@@ -67,7 +67,9 @@ class KontakController extends Controller
 
     public function destroy($kontak_wisata)
     {
-        KontakWisata::destroy($kontak_wisata);
+        $kontak_wisata = KontakWisata::find($kontak_wisata);
+        $kontak_wisata->handleDelete();
+        $kontak_wisata->delete();
 
         return back()->with('danger', 'Data Berhasil Dihapus');
     }

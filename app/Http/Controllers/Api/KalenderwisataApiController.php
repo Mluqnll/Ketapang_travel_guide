@@ -9,10 +9,14 @@ use Illuminate\Http\Request;
 
 class KalenderwisataApiController extends Controller
 {
-    function Januari()
+    // function getAllData()
+    // {
+    //     $data_kalenderwisata = KalenderWisata::all();
+    //     return $data_kalenderwisata->groupBy('id_bulan');
+    // }
+    function getAllData()
     {
-        $id_bulan = "98cce9d1-7d7b-4f74-b032-17f4f422051c";
-        $data_kalenderwisata = KalenderWisata::where('id_bulan', $id_bulan)->get();
+        $data_kalenderwisata = KalenderWisata::all();
         return KalenderwisataResource::collection($data_kalenderwisata);
     }
 }

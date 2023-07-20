@@ -83,9 +83,27 @@
                                 <img src="{{ url("public/$fasilitas->foto") }}" style="width : 100%;"
                                             class="rounded">
                             </div>
-
                             <div class="col-sm-6">
                                 <input type="file" class="form-control" name="foto" value="{{ $fasilitas->foto }}">
+                            </div>
+
+                            <label class="col-sm-2 col-form-label text-left"> Foto1</label>
+                            <div class="col-sm-4">
+                                <img src="{{ url("public/$fasilitas->foto1") }}" style="width : 100%;"
+                                            class="rounded">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="file" class="form-control" name="foto1" value="{{ $fasilitas->foto1}}">
+                            </div>
+
+                            <label class="col-sm-2 col-form-label text-left"> Foto2</label>
+                            <div class="col-sm-4">
+                                <img src="{{ url("public/$fasilitas->foto2") }}" style="width : 100%;"
+                                            class="rounded">
+                            </div>
+
+                            <div class="col-sm-6">
+                                <input type="file" class="form-control" name="foto2" value="{{ $fasilitas->foto1 }}">
                             </div>
                         </div>
 

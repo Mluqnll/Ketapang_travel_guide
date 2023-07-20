@@ -10,8 +10,8 @@
                         <img src="{{url('public/web')}}/assets/images/Ketapang.png" style="height: 5%; width: 5%;" alt="">
                         <img src="{{url('public/web')}}/assets/images/kominfo.png" style="height: 10%; width: 10%;" alt="">
                         <img src="{{url('public/web')}}/assets/images/Logo Politap.png" style="height: 5%; width: 5%;" alt="">
+                        <img src="{{url('public/web')}}/assets/images/ti.png" style="height: 6%; width: 6%;" alt="">
                         <img src="{{url('public/web')}}/assets/images/masata.png" style="height: 5%; width: 5%;" alt="">
-                        <img src="{{url('public/web')}}/assets/images/ti.png" style="height: 5%; width: 5%;" alt="">
                     </ul>
                 </div>
             </div>

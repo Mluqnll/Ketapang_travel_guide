@@ -63,25 +63,32 @@
 
                         <div class="form-group row">
 
-                            <label class="col-sm-2 col-form-label text-left"> Link</label>
-                            <div class="col-sm-4">
+                            <label class="col-sm-1 col-form-label text-left"> Link</label>
+                            <div class="col-sm-3">
                                 <input type="text" class="form-control" name="link"placeholder="Link">
                             </div>
-                            <label class="col-sm-2 col-form-label text-left"> Rating</label>
-                            <div class="col-sm-4">
+                            <label class="col-sm-1 col-form-label text-left"> Rating</label>
+                            <div class="col-sm-3">
                                 <input type="text" class="form-control" name="rating" placeholder="Rating">
+                            </div>
+                            <label class="col-sm-1 col-form-label text-left"> Sumber Foto</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" name="sumber_foto" placeholder="Sumber Foto">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left"> Foto</label>
-                            <div class="col-sm-4">
+                            <div class="col-sm-3">
                                 <input type="file" class="form-control" name="foto" accept=".jpg, .png, .jpeg">
                             </div>
-                            <label class="col-sm-2 col-form-label text-left"> Sumber Foto</label>
-                            <div class="col-sm-4">
-                                <input type="text" class="form-control" name="sumber_foto" placeholder="Sumber Foto">
+                            <div class="col-sm-3">
+                                <input type="file" class="form-control" name="foto1" accept=".jpg, .png, .jpeg">
                             </div>
+                            <div class="col-sm-3">
+                                <input type="file" class="form-control" name="foto2" accept=".jpg, .png, .jpeg">
+                            </div>
+
                         </div>
 
                         <div class="form-group row">

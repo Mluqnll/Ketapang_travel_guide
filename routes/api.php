@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Api\AmenitaswisataApiController;
 use App\Http\Controllers\Api\DesawisataApiController;
 use App\Http\Controllers\Api\AtraksiwisataApiController;
 use App\Http\Controllers\Api\KalenderwisataApiController;
+use App\Http\Controllers\Api\KontakwisataApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -28,3 +30,5 @@ Route::get('wisatabudaya/all', [AtraksiwisataApiController::class,'WisataBudaya'
 Route::get('wisatabuatan/all', [AtraksiwisataApiController::class,'WisataBuatan']);
 Route::get('januari/all', [KalenderwisataApiController::class,'get']);
 Route::get('kalender/all', [KalenderwisataApiController::class,'getAllData']);
+Route::get('kontak/all', [KontakwisataApiController::class,'getAllData']);
+Route::get('hotel/all', [AmenitaswisataApiController::class,'Hotel']);

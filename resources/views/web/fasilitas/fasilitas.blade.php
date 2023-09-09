@@ -59,7 +59,11 @@
                                 </div>
                                 <div class="post-text">
                                     <a href="{{ url("fasilitas-wisata/$fasilitas->id") }}">{{ $fasilitas->nama }}</a>
-                                    <p style="color: #f9d402;">{{$fasilitas->rating}}</p>
+                                    <p style="color: #f3dc0c">
+                                        @for ($i = 1; $i <= $fasilitas->rating; $i++)
+                                            <i class="icofont-star"></i>
+                                        @endfor
+                                    </p>
                                 </div>
                             <div class="post-text">
                                 <p>{{$fasilitas->alamat}}</p>

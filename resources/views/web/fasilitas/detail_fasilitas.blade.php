@@ -25,15 +25,17 @@
                             <ul class="single-blog-list">
                                 <li>
                                     <div class="post-wrap">
-                                        <div class="post-img">
-
-                                            <img class="img-responsive" src="{{ url("public/$fasilitas->foto") }}"
-                                                alt="" />
+                                        <div class="blog-grid-slider slick">
+                                            <div class="item"><img class="img-responsive"
+                                                    src="{{ url("public/$fasilitas->foto") }}" alt="" /></div>
+                                            <div class="item"><img class="img-responsive"
+                                                    src="{{ url("public/$fasilitas->foto1") }}" alt="" /></div>
+                                            <div class="item"><img class="img-responsive"
+                                                    src="{{ url("public/$fasilitas->foto2") }}" alt="" /></div>
                                         </div>
                                         <p class="text-right">Sumber Foto :
                                             <em>{{ $fasilitas->sumber_foto }}</em>
                                         </p>
-
                                     </div>
                                 </li>
                             </ul>
@@ -43,8 +45,6 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="sidebar_widget widget_archive ">
                         <h5 class="aside-title">Informasi</h5>
-                        <a class="btn btn-md btn-dark-outline btn-square mt-10" href="{{ url("$fasilitas->link") }}">Pemesanan tempat</a><br>
-
                         <ul>
                             <li><a style="color: black">Alamat</a> :
                             </li>
@@ -62,7 +62,6 @@
                             </li>
                             <li><a style="color: black">Jam Buka</a> : <span>{!! date('H:i', strtotime($fasilitas->jam_buka)) !!} -
                                     {!! date('H:i', strtotime($fasilitas->jam_tutup)) !!}</span></li>
-
                         </ul>
                         <div class="row">
                             <div class="col-md-4">
@@ -74,6 +73,8 @@
                                 </ul>
                             </div>
                         </div>
+                        <a class="btn btn-md btn-dark-outline btn-square mt-10"
+                            href="{{ url("$fasilitas->link") }}">Pemesanan tempat</a>
                     </div>
                 </div>
             </div>

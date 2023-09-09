@@ -42,6 +42,8 @@ class FasilitasController extends Controller
         $fasilitas->lng = request('lng');
         $fasilitas->sumber_foto = request('sumber_foto');
         $fasilitas->handleUploadFoto();
+        $fasilitas->handleUploadFoto1();
+        $fasilitas->handleUploadFoto2();
         $fasilitas->save();
 
         $id_kategori_fasilitas = request('id_kategori_fasilitas');
@@ -83,6 +85,8 @@ class FasilitasController extends Controller
         $fasilitas->lng = request('lng');
         $fasilitas->sumber_foto = request('sumber_foto');
         if (request('foto')) $fasilitas->handleUploadFoto();
+        if (request('foto1')) $fasilitas->handleUploadFoto1();
+        if (request('foto2')) $fasilitas->handleUploadFoto2();
         $fasilitas->save();
 
         $id_kategori_fasilitas = request('id_kategori_fasilitas');

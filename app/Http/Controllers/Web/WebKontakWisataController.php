@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
-use App\Models\Detail;
+use App\Models\Berita;
 use App\Models\KategoriFasilitas;
 use App\Models\KontakWisata;
 use Illuminate\Http\Request;
@@ -15,7 +15,7 @@ class WebKontakWisataController extends Controller
     {
         $data['list_kategori'] = Kategori::all();
         $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
-        $data['detail'] = Detail::all();
+        $data['list_berita'] = Berita::all();
         $data['list_kontak_wisata'] = KontakWisata::all();
         return view('web.kontak_wisata', $data);
     }
@@ -32,9 +32,14 @@ class WebKontakWisataController extends Controller
     }
 
 
-    public function show(string $id)
+    public function show(string $berita)
     {
-        //
+        $data['list_kategori'] = Kategori::all();
+        $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
+        $data['berita'] = Berita::find($berita);
+        $data['recent_berita'] = Berita::orderBy('id', 'DESC')->get();
+        // return $data;
+        return view('web.berita', $data);
     }
 
 

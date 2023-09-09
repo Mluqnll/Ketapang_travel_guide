@@ -17,30 +17,24 @@ class WebKalenderWisataController extends Controller
         $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
         $data['list_bulan'] = Bulan::all();
         $data['list_kalender_wisata'] = KalenderWisata::all();
-        return view('web.kalender-wisata.kalender_wisata', $data);
+        return view('web.kalender_wisata', $data);
     }
 
     public function kalender()
     {
-        $data['list_bulan'] = Bulan::all();
-        $data['list_kalender_wisata'] = KalenderWisata::all();
-        return view('web.kalender-wisata.kalender', $data);
+        //
     }
 
 
     public function detail($kalender_wisata)
     {
-        $data['kalender_wisata'] = KalenderWisata::find($kalender_wisata);
-        return view('web.kalender-wisata.detail', $data);
+        //
     }
 
 
     public function show($kalender_wisata)
     {
-        $data['kalender_wisata'] = KalenderWisata::find($kalender_wisata);
-        $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
-        $data['list_kategori'] = Kategori::all();
-        return view('web.kalender-wisata.detail_kalender', $data);
+        //
     }
 
 

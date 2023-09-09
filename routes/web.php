@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BeritaWisataController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\PengelolaController;
@@ -50,6 +51,7 @@ Route::prefix('admin')->middleware('auth')->group(function(){
     Route::resource('kontak', KontakController::class);
 
     Route::resource('kategori', KategoriController::class);
+    Route::resource('berita', BeritaWisataController::class);
 
     Route::resource('detail', DetailController::class);
 
@@ -63,20 +65,27 @@ Route::prefix('admin')->middleware('auth')->group(function(){
 Route::post('store-bulan', [KalenderWisataController::class, 'storeBulan']);
 
 Route::resource('/', WebDesaWisataController::class);
-Route::resource('desa-wisata', WebDesaWisataController::class);
-Route::resource('kontak-wisata', WebKontakWisataController::class);
-Route::resource('kalender-wisata', WebKalenderWisataController::class);
-Route::resource('peta-wisata', WebPetaWisataController::class);
-// Route::resource('atraksi-wisata',WebAtraksiWisataController::class);
-// Route::resource('fasilitas-wisata', WebFasilitasController::class);
 
+//desa-wisata
+Route::resource('desa-wisata', WebDesaWisataController::class);
+
+//kontak
+Route::resource('kontak-wisata', WebKontakWisataController::class);
+
+//kalender
+Route::resource('kalender-wisata', WebKalenderWisataController::class);
+
+//peta
+Route::resource('peta-wisata', WebPetaWisataController::class);
+
+//fasilitas
 Route::get('fasilitas/{kategori_fasilitas}',[WebFasilitasController::class,'index']);
 Route::get('fasilitas-wisata/{fasilitas}',[WebFasilitasController::class,'show']);
 
-Route::get('kalender-wisata-mobile', [WebKalenderWisataController::class,'kalender']);
-Route::get('desa-wisata-mobile', [WebDesaWisataController::class,'desa']);
-Route::get('peta-wisata-mobile',[WebPetaWisataController::class,'peta']);
-Route::get('atraksi/mobile/{kategori}',[WebAtraksiWisataController::class,'atraksi']);
+//berita
+Route::get('berita/{berita}', [WebKontakWisataController::class, 'show']);
+
+//atraksi
 Route::get('atraksi/{kategori}',[WebAtraksiWisataController::class,'index']);
 Route::get('atraksi-wisata/{atraksi_wisata}',[WebAtraksiWisataController::class,'show']);
 

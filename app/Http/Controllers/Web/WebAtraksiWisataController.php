@@ -19,7 +19,6 @@ class WebAtraksiWisataController extends Controller
 
         $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
         $data['list_kategori'] = Kategori::all();
-
         $data['list_atraksi_wisata']=AtraksiWisata::where('id_kategori', $kategori)->get();
         return view ('web.atraksi_wisata', $data);
     }

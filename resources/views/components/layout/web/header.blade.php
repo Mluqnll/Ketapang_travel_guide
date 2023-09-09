@@ -39,7 +39,7 @@
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle page-scroll" data-toggle="dropdown">
-                        Amenitas
+                        Fasilitas
                     </a>
                     @yield('fasilitas')
                 </li>

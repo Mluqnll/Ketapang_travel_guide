@@ -3,7 +3,7 @@
     @include('menu.menu')
 
     <section class="xxl-screen pt-0 pb-0 bg-flex-cover" id="home"
-        style="background-image: url(public/web/assets/images/a.jpg);">
+        style="background-image: url(public/web/assets/images/a.JPG);">
         <div class="hero-text-wrap xxl-screen">
             <div class="hero-text">
                 <div class="text-content-slider slick">
@@ -11,6 +11,7 @@
                         <div class="row">
                             <div class="col-md-8 centerize-col">
                                 <div class="all-padding-50 text-center">
+                                    <img src="{{ url('public/web') }}/assets/images/slebew.png" alt="">
                                     <img src="{{ url('public/web') }}/assets/images/tiga.png" alt="">
                                 </div>
                             </div>

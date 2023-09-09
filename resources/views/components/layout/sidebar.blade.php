@@ -33,6 +33,7 @@
             <x-layout.sidebar.menu-item url="admin/kalender-wisata" label="Kalender Wisata"
                 icon="fa fa-calendar" />
             <x-layout.sidebar.menu-item url="admin/kontak" label="Kontak" icon="fa fa-phone" />
+            <x-layout.sidebar.menu-item url="admin/berita" label="Berita" icon="fa fa-envelope" />
             <x-layout.sidebar.menu-item url="admin/detail" label="Detail" icon="fa fa-info" />
             <x-layout.sidebar.menu-item url="logout" label="Logout" icon="fa fa-right-from-bracket" />
 

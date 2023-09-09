@@ -19,7 +19,7 @@ class WebFasilitasController extends Controller
         $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
         $data['kategori_fasilitas'] = KategoriFasilitas::find($kategori_fasilitas);
         $data['list_fasilitas']= Fasilitas::where('id_kategori_fasilitas', $kategori_fasilitas)->get();
-        return view('web.fasilitas.fasilitas', $data);
+        return view('web.fasilitas', $data);
     }
 
     /**
@@ -43,11 +43,7 @@ class WebFasilitasController extends Controller
      */
     public function show($fasilitas)
     {
-        $data['fasilitas'] = Fasilitas::find($fasilitas);
-        
-        $data['list_kategori'] = Kategori::all();
-        $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
-        return view('web.fasilitas.detail_fasilitas', $data);
+        //
     }
 
     /**

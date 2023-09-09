@@ -20,19 +20,19 @@ class WebKalenderWisataController extends Controller
         return view('web.kalender_wisata', $data);
     }
 
-    public function kalender()
+    public function create(Request $request)
     {
         //
     }
 
 
-    public function detail($kalender_wisata)
+    public function store(Request $request)
     {
         //
     }
 
 
-    public function show($kalender_wisata)
+    public function show(Request $request)
     {
         //
     }

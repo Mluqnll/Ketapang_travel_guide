@@ -12,6 +12,7 @@
                             <div class="col-md-8 centerize-col">
                                 <div class="all-padding-50 text-center">
                                     <img src="{{ url('public/web') }}/assets/images/slebew.png" alt="">
+                                    <img src="{{ url('public/web') }}/assets/images/tiga.png" alt="">
                                 </div>
                             </div>
                         </div>

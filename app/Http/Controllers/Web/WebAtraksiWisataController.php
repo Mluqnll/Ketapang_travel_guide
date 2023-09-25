@@ -20,7 +20,7 @@ class WebAtraksiWisataController extends Controller
         $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
         $data['list_kategori'] = Kategori::all();
         $data['list_atraksi_wisata']=AtraksiWisata::where('id_kategori', $kategori)->get();
-        return view ('web.atraksi_wisata', $data);
+        return view ('web.atraksi-wisata.atraksi_wisata', $data);
     }
 
     /**
@@ -42,9 +42,13 @@ class WebAtraksiWisataController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Request $request)
+    public function show($atraksi_wisata)
     {
-        //
+        $data['atraksi_wisata'] = AtraksiWisata::find($atraksi_wisata);
+
+        $data['list_kategori'] = Kategori::all();
+        $data['list_kategori_fasilitas'] = KategoriFasilitas::all();
+        return view('web.atraksi-wisata.detail_atraksi', $data);
     }
 
     /**

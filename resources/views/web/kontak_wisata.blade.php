@@ -41,7 +41,7 @@
                             <div class="team-member">
                                 <div class="team-thumb">
                                     <div class="thumb-overlay"></div>
-                                    <img style="width: 80%;" src="{{ url("public/$berita->foto") }}" alt="">
+                                    <img style="width: 80%; height:50%" src="{{ url("public/$berita->foto") }}" alt="">
                                 </div>
                             </div>
                         </div>
